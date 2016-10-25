@@ -3,7 +3,8 @@
  */
 var OB = angular.module("Template",['ngRoute']);
 
-var indexlayer = [ {
+var indexlayer = [ {"first":"本书内容介绍"},
+    {
     "first":"第一周线性结构",
     "second":["9月13日视频回放","Array","LinkedList","Stack","Queue"],
     "third":["Easy","Medium","Hard"]
@@ -29,14 +30,6 @@ OB.controller("navRepeat",function ($scope) {
 });
 
 
-OB.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.
-        when('/引言', {
-            templateUrl: 'view/引言.html',
-            controller: 'navRepeat'
-        })
-}]);
-
 
 OB.config(['$routeProvider', function ($routeProvider) {
 
@@ -46,23 +39,25 @@ OB.config(['$routeProvider', function ($routeProvider) {
             controller: 'navRepeat'
         });
 
-            for(var index2 in indexlayer[index2].second){
-                $routeProvider.when('/'+indexlayer[index2].first+indexlayer[index1].second[index2], {
-                    templateUrl: 'view/'+indexlayer[index2].first+indexlayer[index1].second[index2]+'.html',
+// console.log('view/' + indexlayer[index1].first + '.html');
+
+            for(var index2 in indexlayer[index1].second){
+                console.log('view/'+indexlayer[index1].second[index2]+'.html');
+                $routeProvider.when('/'+ indexlayer[index1].second[index2], {
+                    templateUrl: 'view/'+indexlayer[index1].second[index2]+'.html',
                     controller: 'navRepeat'
                 });
+
+                for(var index3 in indexlayer[index1].third){
+                    console.log('view/'+indexlayer[index1].second[index2]+indexlayer[index1].third[index3]+'.html');
+                    $routeProvider.when('/'+indexlayer[index1].second[index2]+indexlayer[index1].third[index3], {
+                        templateUrl: 'view/'+indexlayer[index1].second[index2]+indexlayer[index1].third[index3]+'.html',
+                        controller: 'navRepeat'
+                    });
+                }
             }
 
 
-    }}])
+    }
 
-
-// for(var indexl in indexlayer){
-//     console.log(indexlayer[indexl].first + 'view/'+indexl.first+'.html');
-//     console.log(indexl.first);
-//     for(var index2 in indexlayer[indexl].second){
-//
-//         console.log( 'view/'+indexlayer[indexl].first+ indexlayer[indexl].second[index2]+'.html');
-//
-//     }
-// }
+}]);

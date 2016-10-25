@@ -1,0 +1,404 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="9月13日视频回放">9月13日视频回放</h1><div class="gb-video" data-videoid="209269"><div class="flowplayer is-splash is-paused is-mouseout" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="4" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <h2 id="视频截屏">视频截屏</h2><p><img alt="" src="https://bittigerimages.s3.amazonaws.com/gitbookImages/AlgorithmClass/9.13BYclass/Screen%20Shot%202016-09-14%20at%2011.52.52.png"></p><p><img alt="" src="https://bittigerimages.s3.amazonaws.com/gitbookImages/AlgorithmClass/9.13BYclass/Screen%20Shot%202016-09-14%20at%2011.53.07.png"></p><p><img alt="" src="https://bittigerimages.s3.amazonaws.com/gitbookImages/AlgorithmClass/9.13BYclass/Screen%20Shot%202016-09-14%20at%2011.54.11.png"></p><h2 id="题目代码">题目代码</h2><p><strong>Reorder List</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">reorderList</span><span class="hljs-params">(ListNode head)</span> </span>{
+        <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span> || head.next.next == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> ;
+        }
+        <span class="hljs-comment">//1. Find middle and cut</span>
+        ListNode mid = findMid(head);
+        ListNode secondHead = mid.next;
+        mid.next = <span class="hljs-keyword">null</span>;
+
+        <span class="hljs-comment">//2. Reverse the second</span>
+        secondHead = reverse(secondHead);
+        <span class="hljs-comment">//3. Reconnect</span>
+        head = merge(head, secondHead);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">reverse</span> <span class="hljs-params">(ListNode head)</span> </span>{
+        <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || head.next == <span class="hljs-keyword">null</span>)
+        <span class="hljs-keyword">return</span> head;
+        ListNode newHead = <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">while</span> (head != <span class="hljs-keyword">null</span>) {
+          ListNode tmp = head.next;
+          head.next = newHead;
+          newHead = head;
+          head = tmp;
+        }
+        <span class="hljs-keyword">return</span> newHead;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">findMid</span> <span class="hljs-params">(ListNode head)</span> </span>{
+      <span class="hljs-comment">//Key Point: finally slow is pointing to the last node of first half  </span>
+
+        <span class="hljs-comment">//fast is one step ahead at the beginning</span>
+        ListNode fast = head.next;
+        ListNode slow = head;
+        <span class="hljs-keyword">while</span> (fast != <span class="hljs-keyword">null</span> &amp;&amp; fast.next != <span class="hljs-keyword">null</span>) {
+
+            <span class="hljs-comment">//fast move two steps a time</span>
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        <span class="hljs-keyword">return</span> slow;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">merge</span> <span class="hljs-params">(ListNode head, ListNode secHead)</span> </span>{
+    ListNode cur = head;
+    <span class="hljs-keyword">while</span> (secHead != <span class="hljs-keyword">null</span>) {
+        ListNode tmp = secHead.next;
+        secHead.next = cur.next;
+        cur.next =secHead;
+        cur = cur.next.next;
+        secHead = tmp;
+    }
+    <span class="hljs-keyword">return</span> head;
+    }</code></pre>
+                <p><strong>Reverse Nodes in k-Group</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">reverseKGroup</span><span class="hljs-params">(ListNode head, <span class="hljs-keyword">int</span> k)</span> </span>{
+        <span class="hljs-keyword">if</span> (head == <span class="hljs-keyword">null</span> || k &lt;= <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> head;
+        }
+        <span class="hljs-comment">//Dummy node: unify the first subproblem with all others   </span>
+        ListNode dummy = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+        dummy.next = head;
+        ListNode pre = dummy;<span class="hljs-comment">//pre.next points to head of sublist to be reversed</span>
+        <span class="hljs-keyword">int</span> count = k;
+
+        <span class="hljs-keyword">while</span> (head != <span class="hljs-keyword">null</span>) {
+            count--;
+            <span class="hljs-keyword">if</span> (count == <span class="hljs-number">0</span>) {<span class="hljs-comment">//Reverse every k steps</span>
+                pre = reverse(pre, head.next);
+                head = pre.next;
+                count = k;
+            } <span class="hljs-keyword">else</span> {
+                head = head.next;<span class="hljs-comment">//head: find head of next sublist</span>
+            }
+        }
+        <span class="hljs-keyword">return</span> dummy.next;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">reverse</span><span class="hljs-params">(ListNode preHead, ListNode nextHead)</span> </span>{
+        ListNode tail = preHead.next;
+        ListNode cur = tail.next;
+        <span class="hljs-keyword">while</span> (cur != nextHead) {
+            ListNode tmp = cur.next;
+            cur.next = preHead.next;
+            preHead.next = cur;
+            cur = tmp;
+        }
+        tail.next = nextHead;
+        <span class="hljs-keyword">return</span> tail;<span class="hljs-comment">//Return tail reference after each subproblem</span>
+    }  </code></pre>
+                <p><strong>Three Sum -- Method 1</strong></p><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="hljs-keyword">int</span>[] array) {
+   List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+   <span class="hljs-keyword">if</span>(array == <span class="hljs-keyword">null</span> || array.length &lt; <span class="hljs-number">3</span>)
+     <span class="hljs-keyword">return</span> res;
+   <span class="hljs-comment">//Method: three pointers, one fixed,</span>
+   <span class="hljs-comment">//one left to right from fixed, one right to left from rightmos</span>
+   Arrays.sort(array);
+   <span class="hljs-keyword">int</span> fixed = <span class="hljs-number">0</span>;
+   <span class="hljs-keyword">while</span>(fixed &lt; array.length - <span class="hljs-number">2</span>) {
+     <span class="hljs-keyword">int</span> left = fixed + <span class="hljs-number">1</span>;
+     <span class="hljs-keyword">int</span> right = array.length - <span class="hljs-number">1</span>;
+     <span class="hljs-keyword">int</span> rest = <span class="hljs-number">0</span> - array[fixed];
+     <span class="hljs-keyword">while</span>(left &lt; right) {
+       <span class="hljs-comment">//A result found</span>
+       <span class="hljs-keyword">if</span>(array[left] + array[right] == rest) {
+         List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+         list.add(array[fixed]);
+         list.add(array[left++]);
+         list.add(array[right--]);
+         res.add(list);
+         <span class="hljs-comment">//Skip Duplicates for left</span>
+         <span class="hljs-keyword">while</span>(left &lt; right &amp;&amp; array[left] == array[left - <span class="hljs-number">1</span>]) {
+           left++;
+         }
+
+         <span class="hljs-comment">//Skip Duplicates for right</span>
+         <span class="hljs-keyword">while</span>(left &lt; right &amp;&amp; array[right] == array[right + <span class="hljs-number">1</span>]) {
+           right--;
+         }
+       } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (array[left] + array[right] &lt; rest) {
+         left++;
+       } <span class="hljs-keyword">else</span> {
+         right--;
+       }
+     }
+     fixed++;
+     <span class="hljs-comment">//Skip Duplicates for fixed</span>
+     <span class="hljs-keyword">while</span>(fixed &lt; array.length - <span class="hljs-number">2</span> &amp;&amp; array[fixed] == array[fixed - <span class="hljs-number">1</span>]) {
+       fixed++;
+     }
+   }
+   <span class="hljs-keyword">return</span> res;
+ }</code></pre>
+                <p><strong>Three Sum -- Method 2</strong></p><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum2(<span class="hljs-keyword">int</span>[] array) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        <span class="hljs-keyword">if</span>(array == <span class="hljs-keyword">null</span> || array.length &lt; <span class="hljs-number">3</span>) {
+            <span class="hljs-keyword">return</span> res;
+        }
+
+        Arrays.sort(array);
+        <span class="hljs-comment">//Use HashSet to remove duplicates</span>
+        Set&lt;List&lt;Integer&gt;&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;List&lt;Integer&gt;&gt;();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; array.length - <span class="hljs-number">2</span>; i++) {
+            <span class="hljs-keyword">int</span> left = i + <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">int</span> right = array.length - <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">int</span> rest = <span class="hljs-number">0</span> - array[i];
+            <span class="hljs-keyword">while</span> (left &lt; right) {
+                <span class="hljs-keyword">if</span> (array[left] + array[right] == rest)
+                    List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+                    list.add(array[i]);
+                    list.add(array[left++]);
+                    list.add(array[right--]);
+                    <span class="hljs-keyword">if</span> (set.add(list)) {
+                        res.add(list);
+                    }
+                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (array[left] + array[right] &lt; rest) {
+                    left++;
+                } <span class="hljs-keyword">else</span> {
+                    right--;
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }</code></pre>
+                <p><strong>Length of Longest substring -- Method 1</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(String s)</span> </span>{
+        <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || s.length() == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-comment">//Queue: Maintain the substring</span>
+        Deque&lt;Character&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;Character&gt;();
+        <span class="hljs-comment">//Set: Remove duplicates</span>
+        Set&lt;Character&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;Character&gt;();
+        <span class="hljs-keyword">int</span> max = Integer.MIN_VALUE;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">char</span> ch : s.toCharArray()) {
+            <span class="hljs-comment">//Keep pollFirst when duplicates found</span>
+            <span class="hljs-keyword">while</span> (!set.add(ch)) {
+                set.remove(queue.pollFirst());
+            }
+            <span class="hljs-comment">//offerLast when no duplicates</span>
+            queue.offerLast(ch);
+            set.add(ch);
+            max = Math.max(max, queue.size());
+        }
+        <span class="hljs-keyword">return</span> max;
+    }</code></pre>
+                <p><strong>Length of Longest substring -- Method 2</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lengthOfLongestSubstring2</span><span class="hljs-params">(String s)</span> </span>{
+     <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || s.length() == <span class="hljs-number">0</span>) {
+         <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+     }
+     <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+     <span class="hljs-keyword">int</span> end = <span class="hljs-number">0</span>;
+     <span class="hljs-comment">//Array Map to remove duplicates</span>
+     <span class="hljs-keyword">int</span>[] map = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">128</span>];
+     <span class="hljs-keyword">int</span> max = Integer.MIN_VALUE;
+     <span class="hljs-keyword">char</span>[] chS = s.toCharArray();
+     <span class="hljs-keyword">while</span>(end &lt; chS.length){
+         <span class="hljs-comment">//PollFirst --&gt; start++</span>
+         <span class="hljs-keyword">while</span> (map[chS[end]] &gt; <span class="hljs-number">0</span>) {
+             map[chS[start++]]--;
+         }
+         <span class="hljs-comment">//OfferLast --&gt; end++</span>
+         map[chS[end++]]++;
+         max = Math.max(max, end - start);
+     }
+
+     <span class="hljs-keyword">return</span> max;
+ }  </code></pre>
+                <p><strong>Moving Average from Data Stream</strong></p><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MovingAverage</span> </span>{
+    <span class="hljs-keyword">private</span> Deque&lt;Integer&gt; queue;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> sum;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> size;
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MovingAverage</span><span class="hljs-params">(<span class="hljs-keyword">int</span> size)</span> </span>{
+        <span class="hljs-keyword">this</span>.queue = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();
+        <span class="hljs-keyword">this</span>.sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">this</span>.size = size;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">next</span><span class="hljs-params">(<span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">if</span> (queue.size() == size) {
+            <span class="hljs-keyword">int</span> last = queue.pollFirst();
+            sum -= last
+        }
+        queue.offerLast(val);
+        sum += val;
+        <span class="hljs-keyword">return</span> sum * <span class="hljs-number">1.0</span> / queue.size();
+    }
+}</code></pre>
+                <p><strong>Simply Path Method 1</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">simplifyPath</span><span class="hljs-params">(String path)</span> </span>{
+        <span class="hljs-keyword">if</span> (path == <span class="hljs-keyword">null</span> || path.length() == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String();
+        }
+        path = path.trim();
+        Deque&lt;String&gt; deque = <span class="hljs-keyword">new</span> LinkedList&lt;String&gt;();
+        <span class="hljs-keyword">for</span> (String cur : path.split(<span class="hljs-string">"/"</span>)) {
+            <span class="hljs-keyword">if</span> (cur.equals(<span class="hljs-string">".."</span>)) {
+                <span class="hljs-keyword">if</span> (!deque.isEmpty()) {
+                    deque.pollLast();
+                }
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!cur.equals(<span class="hljs-string">"."</span>) &amp;&amp; !cur.equals(<span class="hljs-string">""</span>)) {
+                deque.offerLast(cur);
+            }
+        }
+
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+        <span class="hljs-keyword">while</span> (!deque.isEmpty()) {
+            sb.append(<span class="hljs-string">"/"</span>).append(deque.pollFirst());
+        }
+        <span class="hljs-keyword">return</span> sb.length() == <span class="hljs-number">0</span> ? <span class="hljs-keyword">new</span> String(<span class="hljs-string">"/"</span>) : sb.toString();
+    }</code></pre>
+                <p><strong>Simply Path Method 2</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">simplifyPath2</span><span class="hljs-params">(String path)</span> </span>{
+       <span class="hljs-keyword">if</span> (path == <span class="hljs-keyword">null</span> || path.length() == <span class="hljs-number">0</span>) {
+           <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> String();
+       }
+       path = path.trim();
+       StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+       String[] strs = path.split(<span class="hljs-string">"/"</span>);
+       <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+       <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = strs.length - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+           <span class="hljs-keyword">if</span> (strs[i].equals(<span class="hljs-string">".."</span>))
+               count++;
+           } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!strs[i].equals(<span class="hljs-string">"."</span>) &amp;&amp; !strs[i].equals(<span class="hljs-string">""</span>)) {
+               <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) {
+                   count--;
+               } <span class="hljs-keyword">else</span> {
+                   sb.insert(<span class="hljs-number">0</span>, <span class="hljs-string">"/"</span> + strs[i]);
+               }
+           }
+       }
+       <span class="hljs-keyword">return</span> sb.length() == <span class="hljs-number">0</span> ? <span class="hljs-keyword">new</span> String(<span class="hljs-string">"/"</span>) : sb.toString();
+   }</code></pre>
+                <p><strong>Largest Rectangle in Histogram</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">largestRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] array)</span> </span>{
+    <span class="hljs-keyword">if</span> (array == <span class="hljs-keyword">null</span> || array.length == <span class="hljs-number">0</span>)
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    Deque&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();<span class="hljs-comment">//store the index</span>
+    <span class="hljs-keyword">int</span> max = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= array.length; i++) {
+      <span class="hljs-comment">//Each elem will be push once and poll once</span>
+      <span class="hljs-comment">//1. Check whether this elem can be pushed into the stack</span>
+      <span class="hljs-keyword">int</span> curVal = i == array.length ? <span class="hljs-number">0</span> : array[i];
+      <span class="hljs-keyword">while</span>(!stack.isEmpty() &amp;&amp; array[stack.peekLast()] &gt;= curVal) {
+          <span class="hljs-keyword">int</span> height = array[stack.pollLast()];
+          <span class="hljs-keyword">int</span> leftBound = stack.isEmpty() ? <span class="hljs-number">0</span> : stack.peekLast() + <span class="hljs-number">1</span>;
+          <span class="hljs-keyword">int</span> rightBound = i;
+          max = Math.max(max, height * (rightBound - leftBound));
+      }
+      <span class="hljs-comment">//2. Push the elem into the stack</span>
+      stack.addLast(i);
+    }
+    <span class="hljs-keyword">return</span> max;
+    }</code></pre>
+                <p><strong>Trapping Water Method 1</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">trap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] height)</span> </span>{
+    <span class="hljs-keyword">if</span>(height.length == <span class="hljs-number">0</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    Deque&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; height.length; i++) {
+        <span class="hljs-keyword">int</span> cur = height[i];
+
+        <span class="hljs-keyword">while</span>(!stack.isEmpty() &amp;&amp; height[stack.peekLast()] &lt; cur) {
+            <span class="hljs-keyword">int</span> index = stack.pollLast();
+            <span class="hljs-keyword">if</span>(!stack.isEmpty()) {
+                <span class="hljs-keyword">int</span> rightBound = stack.peekLast();
+                <span class="hljs-keyword">int</span> leftBound = i;
+                sum += (leftBound - rightBound - <span class="hljs-number">1</span>) *
+                        (Math.min(cur, height[rightBound]) - height[index])
+            }
+        }
+            stack.offerLast(i);
+    }
+    <span class="hljs-keyword">return</span> sum;
+}</code></pre>
+                <p><strong>Trapping Water -- Method 2</strong></p><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">trap2</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>{
+    <span class="hljs-keyword">if</span>(arr == <span class="hljs-keyword">null</span> || arr.length &lt;= <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    <span class="hljs-comment">//Two Scanners</span>
+    <span class="hljs-keyword">int</span> left = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> right = arr.length - <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+    <span class="hljs-comment">//Two Walls</span>
+    <span class="hljs-keyword">int</span> leftMax = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">int</span> rightMax = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">while</span>(left &lt;= right) {
+      <span class="hljs-comment">//Move lower wall first: Guarantee middle region can trap water</span>
+      <span class="hljs-keyword">if</span>(leftMax &lt;= rightMax) {
+      leftMax = Math.max(leftMax, arr[left]);
+      <span class="hljs-keyword">if</span>(arr[left] &lt; leftMax)
+        sum += leftMax - arr[left];
+        left++;
+      }<span class="hljs-keyword">else</span> {
+        rightMax = Math.max(rightMax, arr[right]);
+        <span class="hljs-keyword">if</span>(arr[right] &lt; rightMax)
+        sum += rightMax - arr[right];
+        right--;
+      }
+    }
+    <span class="hljs-keyword">return</span> sum;
+  }</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>
