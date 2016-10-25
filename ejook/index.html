@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="ebookPageMainHtmlTag" ng-app="Template">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel ="./cssJs/stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" class="__meteor-css__"
+          href="./cssJS/02dd3857c669de9e1a0ab42c61337ed361c02be3.css">
+    <link rel="stylesheet" type="text/css" class="__meteor-css__"
+          href="./cssJS/e021be9d72fdda8b2726b5e22a5a8f1854940d23.css">
+    <link rel="stylesheet" type="text/css" class="__meteor-css__"
+          href="./cssJS/5fa17d9f830053db94e0ee954d1ac69c6c118802.css">
+    <title>CS102 Top100高频算法训练营</title>
+
+    <script src="angular.js"></script>
+    <script src = "controler.js"></script>
+    <script src = "angular-route.min.js"></script>
+
+</head>
+<body id="page-top" class="index modal-open" style="padding-right: 15px;">
+
+<script type="text/javascript" src="./cssJS/b737147e2197cc730f4c759212b660c70b79b66f.js"></script>
+
+
+<div class="ebookMainContainer" ng-controller="navRepeat">
+    <div class="book with-summary font-size-2 font-family-1">
+        <div class="book-summary">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav role="navigation">
+                <ul class="summary">
+                    <li class="divider"></li>
+                    <li class="header active">Summary</li>
+                    <li class="chapter " ng-repeat="var in navOB">
+                        <a href={{"#/"+var.first}}>{{var.first}}</a>
+                        <ul class="articles" ng-repeat="subvar in var.second">
+                            <li class="chapter">
+                                <a href={{"#/"+subvar}}>{{subvar}}</a>
+                                <ul class="articles" ng-repeat="thirvar in var.third" ng-if ="subvar != var.second[0]">
+                                    <li class="chapter">
+                                        <a href={{"#/"+subvar+thirvar}}>
+                                            {{thirvar}}
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="book-body">
+            <div class="body-inner">
+                <div class="book-header" role="navigation">
+                    <!--<a id="sidePanelToggleBtn" class="btn pull-left js-toolbar-action" aria-label=""-->
+                       <!--href="#">-->
+                        <!--<i class="fa fa-align-justify"></i>-->
+                    <!--</a>-->
+                    <!--<h1>-->
+                        <!--<i class="fa fa-circle-o-notch fa-spin"></i>-->
+                        <!--<a href="https://www.bittiger.io/livecourses/66RhgaqQPgkWfGQcT/ebook/57e1eb2d62c48e29923c4021/"></a>-->
+                    <!--</h1>-->
+                </div>
+                <div class="page-wrapper" tabindex="-1" role="main" ng-view="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
