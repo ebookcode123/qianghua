@@ -1,0 +1,139 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="medium">Medium</h1><h2 id="evaluate-reverse-polish-rotation">Evaluate Reverse Polish Rotation</h2><div class="gb-video" data-videoid="205234"><div class="flowplayer is-splash is-mouseout is-paused" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="9" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui" title="Hit ? for help">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <ul><li>Method 1.
+                </li></ul>
+                <pre><code class="lang-Java">
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">evalRPN</span><span class="hljs-params">(String[] tokens)</span> </span>{​
+        <span class="hljs-keyword">if</span>(tokens == <span class="hljs-keyword">null</span> || tokens.length == <span class="hljs-number">0</span>) {​
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;​
+        }​
+        ​
+        Deque&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;(); <span class="hljs-comment">// Store all numbers to be calculate​</span>
+        ​
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tokens.length; i++){​
+            <span class="hljs-keyword">switch</span> (tokens[i]) {​
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"+"</span>:​
+                    stack.offerLast(stack.pollLast() + stack.pollLast());​
+                    <span class="hljs-keyword">break</span>;​
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"-"</span>:​
+                    <span class="hljs-keyword">int</span> a1 = stack.pollLast();​
+                    <span class="hljs-keyword">int</span> b1 = stack.pollLast();​
+                    stack.offerLast(b1 - a1);​
+                    <span class="hljs-keyword">break</span>;​
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"*"</span>:​
+                    stack.offerLast(stack.pollLast() * stack.pollLast());​
+                    <span class="hljs-keyword">break</span>;​
+                <span class="hljs-keyword">case</span> <span class="hljs-string">"/"</span>:​
+                    <span class="hljs-keyword">int</span> a2 = stack.pollLast();​
+                    <span class="hljs-keyword">int</span> b2 = stack.pollLast();​
+                    stack.offerLast(b2 / a2);​
+                    <span class="hljs-keyword">break</span>;​
+                <span class="hljs-keyword">default</span>:​
+                    stack.offerLast(Integer.parseInt(tokens[i]));​
+                    <span class="hljs-keyword">break</span>;​
+            }​
+        }​
+        <span class="hljs-keyword">return</span> stack.pollLast();​
+    }​
+</code></pre>
+                <ul><li>Method 2
+                </li></ul>
+                <pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">evalInFix</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[] tokens)</span> </span>{​
+        <span class="hljs-comment">//Corner Case Checked​</span>
+        Deque&lt;Integer&gt; valStack = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();<span class="hljs-comment">//Stack to store numbers​</span>
+        Deque&lt;Character&gt; opStack = <span class="hljs-keyword">new</span> LinkedList&lt;Character&gt;();<span class="hljs-comment">//Stack to store operators​</span>
+        ​
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; tokens.length; i++){​
+       ​
+            <span class="hljs-keyword">if</span> (tokens[i] == <span class="hljs-string">'('</span>) { <span class="hljs-comment">//Case 1: '('​</span>
+                opStack.offerLast(tokens[i]);​
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tokens[i] == <span class="hljs-string">')'</span>) { <span class="hljs-comment">//Case 2: ')'​</span>
+                <span class="hljs-keyword">while</span> (opStack.peekLast() != <span class="hljs-string">'('</span>) {​
+                    valStack.offerLast(cal(opStack.pollLast(), valStack.pollLast(), valStack.pollLast())); ​
+                }​
+                opStack.pollLast();<span class="hljs-comment">//Poll '('​</span>
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tokens[i] == <span class="hljs-string">'+'</span> || tokens[i] == <span class="hljs-string">'-'</span> || tokens[i] == <span class="hljs-string">'*'</span> || tokens[i] == <span class="hljs-string">'/'</span>) {<span class="hljs-comment">// Case 3: Operators other than parentheses ​</span>
+                <span class="hljs-keyword">while</span> (!opStack.isEmpty() &amp;&amp; isLowerThan(tokens[i], opStack.peekLast())) {​
+                    valStack.offerLast(cal(opStack.pollLast(), valStack.pollLast(), valStack.pollLast()));​
+                }​
+                opStack.offerLast(tokens[i]);<span class="hljs-comment">//Offer current operator ​</span>
+            } <span class="hljs-keyword">else</span> {<span class="hljs-comment">//Case 4: number​</span>
+                valStack.offerLast(Integer.parseInt(tokens[i]));​
+            }​
+        }​
+        <span class="hljs-comment">//Calculate all numbers rest in stack​</span>
+        <span class="hljs-keyword">while</span> (!opStack.isEmpty()) {​
+            valStack.offerLast(cal(opStack.pollLast(), valStack.pollLast(), valStack.pollLast()));​
+            }​
+        ​
+        <span class="hljs-keyword">return</span> valStack.pollLast();​
+    }​
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isLowerThan</span><span class="hljs-params">(<span class="hljs-keyword">char</span> cur, <span class="hljs-keyword">char</span> toPeek)</span> </span>{​
+          <span class="hljs-keyword">return</span> (toPeek == <span class="hljs-string">'*'</span> || toPeek == <span class="hljs-string">'/'</span>) &amp;&amp; (cur == <span class="hljs-string">'+'</span> || cur == <span class="hljs-string">'-'</span>);​
+      }​    ​</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>
