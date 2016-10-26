@@ -38,13 +38,13 @@
                             <li class="chapter">
                                 <a href={{"#/"+subvar}}>{{subvar}}</a>
                                 <ul class="articles" ng-repeat="thirvar in var.third"  ng-if="subvar != var.second[0] && subvar != 'Queue'">
-                                    <li class="chapter" >
+                                    <li class="chapter" ng-hide="((subvar == 'Recursion'|| subvar == 'Binary Tree') && thirvar == 'Hard')">
                                         <a href={{"#/"+subvar+thirvar}}>
                                             {{thirvar}}
                                         </a>
                                     </li>
                                 </ul>
-
+                                <!--ng-if="!!(subvar == 'Recursion' & thirvar == 'Hard')"-->
                             </li>
 
                         </ul>

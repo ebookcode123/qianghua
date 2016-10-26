@@ -27,6 +27,12 @@ var indexlayer = [ {"first":"本书内容介绍"},
 
 OB.controller("navRepeat",function ($scope) {
     $scope.navOB = indexlayer;
+    // $scope.testFn = function () {
+    //     if(subvar == 'Recursion' && thirvar == 'Hard'){
+    //         return false;
+    //     }
+    //     else return true;
+    // }
 });
 
 
