@@ -1,0 +1,503 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="9月20日视频回放">9月20日视频回放</h1><div class="gb-video" data-videoid="214070"><div class="flowplayer is-splash is-paused is-mouseout" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="1" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <p><img alt="" src="https://bittigerimages.s3.amazonaws.com/gitbookImages/AlgorithmClass/9.20byclass/Code_Class_2.050.jpeg"></p><p><img alt="" src="https://bittigerimages.s3.amazonaws.com/gitbookImages/AlgorithmClass/9.20byclass/Code_Class_2.051.jpeg"></p><h2 id="1-sorted-array-to-bst">1. Sorted Array to BST</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> TreeNode <span class="hljs-title">sortedArrayToBST</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] num)</span> </span>{
+        <span class="hljs-keyword">if</span> (num == <span class="hljs-keyword">null</span> || num.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        <span class="hljs-keyword">return</span> buildtree(num, <span class="hljs-number">0</span>, num.length - <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> TreeNode <span class="hljs-title">buildtree</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] num, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span></span>{
+        <span class="hljs-keyword">if</span>(start &gt; end) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+
+        TreeNode root = <span class="hljs-keyword">new</span> TreeNode(num[mid]);
+        root.left = buildtree(num, start, mid - <span class="hljs-number">1</span>);
+        root.right = buildtree(num, mid + <span class="hljs-number">1</span>, end);
+
+        <span class="hljs-keyword">return</span> root;
+    }</code></pre>
+                <h2 id="22-spiral-matrix">2.2 Spiral Matrix</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title">spiralOrder</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>{
+        <span class="hljs-comment">//Using recursion: print all boundary elem in spiral order in each level, using boundary size to move into next level</span>
+        List&lt;Integer&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        <span class="hljs-keyword">if</span>(matrix == <span class="hljs-keyword">null</span> || matrix.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> res;
+        <span class="hljs-keyword">if</span>(matrix[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || matrix[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> res;
+
+        <span class="hljs-keyword">int</span> row = matrix.length;
+        <span class="hljs-keyword">int</span> col = matrix[<span class="hljs-number">0</span>].length;
+        helper(res, matrix, row, col, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">return</span> res;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(List&lt;Integer&gt; res, <span class="hljs-keyword">int</span>[][] m, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span> offset)</span> </span>{
+        <span class="hljs-comment">//Base Cases:</span>
+        <span class="hljs-keyword">if</span>(row == <span class="hljs-number">0</span> || col == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span>;
+
+        <span class="hljs-keyword">if</span>(row == <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; col + offset; i++) {
+                res.add(m[offset][i]);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">if</span>(col == <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; row + offset; i++) {
+                res.add(m[i][offset]);
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-comment">//1. up row</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; col - <span class="hljs-number">1</span> + offset; i++) {
+            res.add(m[offset][i]);
+        }
+        <span class="hljs-comment">//2. right col</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; row - <span class="hljs-number">1</span> + offset; i++) {
+            res.add(m[i][col - <span class="hljs-number">1</span> + offset]);
+        }
+        <span class="hljs-comment">//3. down row</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = col - <span class="hljs-number">1</span> + offset; i &gt; offset; i--) {
+            res.add(m[row - <span class="hljs-number">1</span> + offset][i]);
+        }
+        <span class="hljs-comment">//4. left col</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = row - <span class="hljs-number">1</span> + offset; i &gt; offset; i--) {
+            res.add(m[i][offset]);
+        }
+
+        <span class="hljs-comment">//Next level</span>
+        helper(res, m, row - <span class="hljs-number">2</span>, col - <span class="hljs-number">2</span>, offset + <span class="hljs-number">1</span>);
+    }</code></pre>
+                <h2 id="22-spiral-matrix-ii">2.2. Spiral Matrix II</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[][] generateMatrix(<span class="hljs-keyword">int</span> n) {
+        <span class="hljs-keyword">if</span>(n &lt;= <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+
+        <span class="hljs-keyword">int</span>[] cur = {<span class="hljs-number">0</span>};
+        <span class="hljs-keyword">int</span>[][] res = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n][n];
+        helper(res, cur, n, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">return</span> res;
+}
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] res, <span class="hljs-keyword">int</span>[] cur, <span class="hljs-keyword">int</span> size, <span class="hljs-keyword">int</span> offset)</span> </span>{
+        <span class="hljs-comment">//Base cases:</span>
+        <span class="hljs-keyword">if</span>(size == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span>(size == <span class="hljs-number">1</span>) {
+            res[offset][offset] = ++cur[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-comment">//1. first row</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; size - <span class="hljs-number">1</span> + offset; i++) {
+            res[offset][i] = ++cur[<span class="hljs-number">0</span>];
+        }
+        <span class="hljs-comment">//2. right col</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = offset; i &lt; size - <span class="hljs-number">1</span> + offset; i++) {
+            res[i][size - <span class="hljs-number">1</span> + offset] = ++cur[<span class="hljs-number">0</span>];
+        }
+        <span class="hljs-comment">//3. last row</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = size - <span class="hljs-number">1</span> + offset; i &gt; offset; i--) {
+            res[size - <span class="hljs-number">1</span> + offset][i] = ++cur[<span class="hljs-number">0</span>];
+        }
+        <span class="hljs-comment">//4. left col</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = size - <span class="hljs-number">1</span> + offset; i &gt; offset; i--) {
+            res[i][offset] = ++cur[<span class="hljs-number">0</span>];
+        }
+
+        <span class="hljs-comment">//Next level</span>
+        helper(res, cur, size - <span class="hljs-number">2</span>, offset + <span class="hljs-number">1</span>);
+}</code></pre>
+                <h2 id="3-merge-sort">3. Merge Sort</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] mergeSort(<span class="hljs-keyword">int</span>[] arr) {
+
+    <span class="hljs-keyword">if</span>(arr == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> arr;
+    <span class="hljs-keyword">int</span>[] helper = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[arr.length];
+     doSort(arr, helper, <span class="hljs-number">0</span>, arr.length - <span class="hljs-number">1</span>);
+      <span class="hljs-keyword">return</span> arr;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span>[] helper, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+
+    <span class="hljs-keyword">if</span>(start &gt;= end)
+      <span class="hljs-keyword">return</span> ;
+
+    <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+    doSort(arr, helper, start, mid);
+    doSort(arr, helper, mid + <span class="hljs-number">1</span>, end);
+    merge(arr, helper, start, mid, end);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span>[] helper, <span class="hljs-keyword">int</span> aStart, <span class="hljs-keyword">int</span> aEnd, <span class="hljs-keyword">int</span> bEnd)</span> </span>{
+    <span class="hljs-comment">//Copy arr from aStart to bEnd</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = aStart; i &lt;= bEnd; i++) {
+      helper[i] = arr[i];
+    }
+
+    <span class="hljs-keyword">int</span> aCur = aStart;
+    <span class="hljs-keyword">int</span> bCur = aEnd + <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = aStart; i &lt;= bEnd; i++) {
+    <span class="hljs-comment">//One Exausts</span>
+    <span class="hljs-keyword">if</span> (aCur &gt; aEnd) {
+      arr[i] = helper[bCur++];
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (bCur &gt; bEnd) {
+      arr[i] = helper[aCur++];
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (helper[aCur] &lt;= helper[bCur]) {
+      arr[i] = helper[aCur++];
+    } <span class="hljs-keyword">else</span> {
+      arr[i] = helper[bCur++];
+    }
+  }
+}</code></pre>
+                <h2 id="4-search-in-rotated-sorted-array">4. Search in Rotated Sorted Array</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+        <span class="hljs-keyword">if</span>(nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> end = nums.length - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(start + <span class="hljs-number">1</span> &lt; end) {
+            <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+
+            <span class="hljs-keyword">if</span>(nums[mid] == target)
+                <span class="hljs-keyword">return</span> mid;
+
+            <span class="hljs-keyword">if</span>(nums[mid] &gt; nums[start]) {
+                <span class="hljs-keyword">if</span>(target &gt;= nums[start] &amp;&amp; target &lt; nums[mid]) {
+                    end = mid;
+                } <span class="hljs-keyword">else</span> {
+                    start = mid;
+                }
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-keyword">if</span>(target &gt; nums[mid] &amp;&amp; target &lt;= nums[end]) {
+                    start = mid;
+                } <span class="hljs-keyword">else</span> {
+                    end = mid;
+                }
+            }
+        }
+
+        <span class="hljs-keyword">if</span>(nums[start] == target)
+            <span class="hljs-keyword">return</span> start;
+        <span class="hljs-keyword">if</span>(nums[end] == target)
+            <span class="hljs-keyword">return</span> end;
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+</code></pre>
+                <p>Follow Up: What if duplicates?</p><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">search</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> target)</span> </span>{
+        <span class="hljs-keyword">if</span>(nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> start = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> end = nums.length - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(start + <span class="hljs-number">1</span> &lt; end) {
+            <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+
+            <span class="hljs-keyword">if</span>(nums[mid] == target)
+                <span class="hljs-keyword">return</span> mid;
+
+            <span class="hljs-keyword">if</span>(nums[mid] &gt; nums[start]) {
+                <span class="hljs-keyword">if</span>(target &gt;= nums[start] &amp;&amp; target &lt; nums[mid]) {
+                    end = mid;
+                } <span class="hljs-keyword">else</span> {
+                    start = mid;
+                }
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; nums[start]){
+                <span class="hljs-keyword">if</span>(target &gt; nums[mid] &amp;&amp; target &lt;= nums[end]) {
+                    start = mid;
+                } <span class="hljs-keyword">else</span> {
+                    end = mid;
+                }
+            } <span class="hljs-keyword">else</span> {
+   start++;<span class="hljs-comment">//Duplicates</span>
+ }
+        }
+
+        <span class="hljs-keyword">if</span>(nums[start] == target)
+            <span class="hljs-keyword">return</span> start;
+        <span class="hljs-keyword">if</span>(nums[end] == target)
+            <span class="hljs-keyword">return</span> end;
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+</code></pre>
+                <h2 id="5-zigzag-level-order-traversal">5. ZigZag Level Order Traversal</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; zigzagLevelOrder(TreeNode root) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> res;
+        <span class="hljs-comment">//Method: Using a deque to maintain the current nodes in the same level with the same order from left to right</span>
+        Deque&lt;TreeNode&gt; deque = <span class="hljs-keyword">new</span> LinkedList&lt;TreeNode&gt;();
+        <span class="hljs-keyword">boolean</span> lefttoRight = <span class="hljs-keyword">true</span>;<span class="hljs-comment">//The order to put into result</span>
+        deque.addFirst(root);
+        <span class="hljs-keyword">while</span> (!deque.isEmpty()) {
+            <span class="hljs-keyword">int</span> size = deque.size();
+            List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++) {
+                <span class="hljs-keyword">if</span>(lefttoRight) {<span class="hljs-comment">//Case 1</span>
+                    TreeNode cur = deque.pollFirst();
+                    list.add(cur.val);
+                    <span class="hljs-keyword">if</span> (cur.left != <span class="hljs-keyword">null</span>)
+                        deque.addLast(cur.left);
+                    <span class="hljs-keyword">if</span> (cur.right != <span class="hljs-keyword">null</span>)
+                        deque.addLast(cur.right);
+                } <span class="hljs-keyword">else</span> {<span class="hljs-comment">//Case 2</span>
+                    TreeNode cur = deque.pollLast();
+                    list.add(cur.val);
+                    <span class="hljs-keyword">if</span> (cur.right != <span class="hljs-keyword">null</span>)
+                        deque.addFirst(cur.right);
+                    <span class="hljs-keyword">if</span> (cur.left != <span class="hljs-keyword">null</span>)
+                        deque.addFirst(cur.left);
+                }
+            }
+            lefttoRight = lefttoRight ? <span class="hljs-keyword">false</span>: <span class="hljs-keyword">true</span>;
+            res.add(list);
+        }
+        <span class="hljs-keyword">return</span> res;
+    }</code></pre>
+                <h2 id="61--path-sum-iv">6.1.  Path Sum I~V</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pathSum(TreeNode root, <span class="hljs-keyword">int</span> sum) {
+
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> res;
+        }
+
+        List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        helper(root, sum, list, res);
+
+        <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span> sum, List&lt;Integer&gt; list, List&lt;List&lt;Integer&gt;&gt; res)</span> </span>{
+
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+
+        list.add(root.val);
+
+        <span class="hljs-keyword">if</span> (sum == root.val &amp;&amp; root.left == <span class="hljs-keyword">null</span> &amp;&amp; root.right == <span class="hljs-keyword">null</span>) {
+            res.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(list));
+
+        } <span class="hljs-keyword">else</span> {
+            helper(root.left, sum - root.val, list, res);
+            helper(root.right, sum - root.val, list, res);
+        }
+
+        list.remove(list.size() - <span class="hljs-number">1</span>);
+
+    }</code></pre>
+                <h2 id="62--follow-up-—-subsection-of-complete-path-from-root-to-leaf">6.2.  Follow Up — Subsection of complete path from root to leaf</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">int</span> target, List&lt;Integer&gt; list, List&lt;List&lt;Integer&gt;&gt; res)</span> </span>{
+
+   <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = list.size() - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+     target -= list.get(i);
+     <span class="hljs-keyword">if</span>(target == <span class="hljs-number">0</span>)
+       <span class="hljs-comment">//add to result</span>
+   }
+ }</code></pre>
+                <h2 id="63--follow-up-return-the-max-path-sum-on-the-subsection-of-complete-path-from-root-to-leaf">6.3.  Follow Up: Return the Max Path Sum on the Subsection of complete path from root to leaf</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxPathSum</span><span class="hljs-params">(TreeNode root)</span> </span>{
+
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> Integer.MIN_VALUE;
+    <span class="hljs-keyword">int</span>[] max = {Integer.MIN_VALUE};
+    helper(root, max);
+    <span class="hljs-keyword">return</span> max[<span class="hljs-number">0</span>];
+  }
+
+
+  <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">helper</span><span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span>[] max)</span> </span>{
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">int</span> left = helper(root.left, max);
+    <span class="hljs-keyword">int</span> right = helper(root.right, max);
+
+    left = Math.max(left, <span class="hljs-number">0</span>);
+    right = Math.max(right, <span class="hljs-number">0</span>);
+
+    max[<span class="hljs-number">0</span>] = Math.max(max[<span class="hljs-number">0</span>], Math.max(left, right) + root.val);
+
+    <span class="hljs-keyword">return</span> Math.max(left, right) + root.val;
+  }</code></pre>
+                <h2 id="64--follow-up-path-—-any-node-to-any-other-node">6.4.  Follow Up: Path —&gt; Any node to any other node</h2><pre><code class="lang-Java"><span class="hljs-keyword">if</span> (root.left != <span class="hljs-keyword">null</span> &amp;&amp; root.right != <span class="hljs-keyword">null</span>) {
+      max[<span class="hljs-number">0</span>] = Math.max(left + right + root.val, max[<span class="hljs-number">0</span>]);
+}</code></pre>
+                <pre><code class="lang-Java"><span class="hljs-keyword">if</span>(root.left == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> root.val + right;
+<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (root.right == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> root.val + left;
+<span class="hljs-keyword">else</span>
+      <span class="hljs-keyword">return</span> Math.max(left, right) + root.val;</code></pre>
+                <h2 id="7--delete-a-node-in-bst">7.  Delete a Node in BST</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> TreeNode <span class="hljs-title">delete</span> <span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> root;
+        TreeNode dummy = <span class="hljs-keyword">new</span> TreeNode (Integer.MIN_VALUE);
+        dummy.left = root;
+        TreeNode prev = dummy;
+        TreeNode cur = root;
+        <span class="hljs-comment">//1. Find the node with val</span>
+        <span class="hljs-keyword">while</span> (cur != <span class="hljs-keyword">null</span> &amp;&amp; cur.val != val) {
+            prev = cur;
+            <span class="hljs-keyword">if</span> (cur.val &lt; val) {
+                cur = cur.right;
+            }
+            <span class="hljs-keyword">else</span> {
+                cur = cur.left;
+            }
+        }
+        <span class="hljs-keyword">if</span> (cur == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> dummy.left;<span class="hljs-comment">//Not found</span>
+        TreeNode target = cur;
+        <span class="hljs-comment">//2. Case 1: Two child</span>
+    <span class="hljs-keyword">if</span> (cur.left != <span class="hljs-keyword">null</span> &amp;&amp; cur.right != <span class="hljs-keyword">null</span>) {
+      <span class="hljs-comment">//2.1 Find the leftMost node in right subTree</span>
+      prev = cur;
+      cur = cur.right;
+      <span class="hljs-keyword">while</span> (cur.left != <span class="hljs-keyword">null</span>) {
+          prev = cur;
+          cur = cur.left;
+      }
+      <span class="hljs-comment">//2.2 Change value</span>
+      target.val = cur.val;
+  }
+  <span class="hljs-comment">//3. Case 2: Delete cur, which has one or no child</span>
+  <span class="hljs-keyword">if</span> (cur.left == <span class="hljs-keyword">null</span>) {
+      <span class="hljs-keyword">if</span> (prev.left == cur)
+          prev.left = cur.right;
+      <span class="hljs-keyword">else</span>
+          prev.right = cur.right;
+  } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">if</span> (prev.left == cur)
+          prev.left = cur.left;
+      <span class="hljs-keyword">else</span>
+          prev.right = cur.left;
+  }
+  <span class="hljs-keyword">return</span> dummy.left;
+}</code></pre>
+                <h2 id="8--largest-bst-subtree">8.  Largest BST SubTree</h2><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">largestBSTSubtree</span><span class="hljs-params">(TreeNode root)</span> </span>{
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">if</span> (isValid(root, Integer.MIN_VALUE, Integer.MAX_VALUE)) {
+        <span class="hljs-keyword">return</span> count(root);
+    }
+    <span class="hljs-keyword">return</span> Math.max(largestBSTSubtree(root.left), largestBSTSubtree(root.right));
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(TreeNode root, Integer min, Integer max)</span> </span>{
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-keyword">if</span> (root.val &gt;= max || root.val &lt;= min) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+
+    <span class="hljs-keyword">return</span> isValid(root.left, min, root.val) &amp;&amp; isValid(root.right, root.val, max);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">count</span><span class="hljs-params">(TreeNode root)</span> </span>{
+    <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">return</span> count(root.left) + count(root.right) + <span class="hljs-number">1</span>;
+}
+</code></pre>
+                <p>O(n) Time Solution</p><pre><code class="lang-Java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Result</span> </span>{
+        <span class="hljs-keyword">int</span> size;
+        <span class="hljs-keyword">int</span> min;
+        <span class="hljs-keyword">int</span> max;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Result</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> size, <span class="hljs-keyword">int</span> min, <span class="hljs-keyword">int</span> max)</span> </span>{
+            <span class="hljs-keyword">this</span>.size = size;
+            <span class="hljs-keyword">this</span>.min = min;
+            <span class="hljs-keyword">this</span>.max = max;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">largestBSTSubtree</span><span class="hljs-params">(TreeNode root)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">int</span>[] max = {<span class="hljs-number">0</span>};
+        Result res = helper(root);
+        <span class="hljs-keyword">return</span> max[<span class="hljs-number">0</span>];
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> Result <span class="hljs-title">helper</span><span class="hljs-params">(TreeNode root)</span> </span>{
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Result(<span class="hljs-number">0</span>, Integer.MAX_VALUE, Integer.MIN_VALUE);
+        }
+        Result left = helper(root.left);
+        Result right = helper(root.right);
+
+        <span class="hljs-keyword">if</span> (left.size == -<span class="hljs-number">1</span> || right.size == -<span class="hljs-number">1</span> || root.val &lt;= left.max || root.val &gt;= right.min) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Result(-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+        } <span class="hljs-keyword">else</span> {
+
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Result(left.size + right.size + <span class="hljs-number">1</span>, Math.min(left.min, root.val), Math.max(root.val, right.max));
+        }
+    }</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>

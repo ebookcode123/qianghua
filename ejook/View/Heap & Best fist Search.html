@@ -1,0 +1,230 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="heap--best-first-search">Heap &amp; Best first search</h1><h2 id="kth-smallest-in-sorted-matrix">Kth Smallest in Sorted Matrix</h2><div class="gb-video" data-videoid="216977"><div class="flowplayer is-splash is-mouseout is-paused" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="22" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui" title="Hit ? for help">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <p><strong>Kth Smallest in Sorted Matrix (I)</strong></p><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">kthSmallest</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix, <span class="hljs-keyword">int</span> k)</span> </span>{
+    <span class="hljs-keyword">if</span> (matrix == <span class="hljs-keyword">null</span>)
+      <span class="hljs-keyword">return</span> Integer.MIN_VALUE;
+
+    <span class="hljs-keyword">int</span> row = matrix.length;
+    <span class="hljs-keyword">int</span> col = matrix[<span class="hljs-number">0</span>].length;
+
+    <span class="hljs-keyword">boolean</span>[][] marked = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[row][col];
+    PriorityQueue&lt;Point&gt; minHeap = <span class="hljs-keyword">new</span> PriorityQueue&lt;Point&gt;(k, <span class="hljs-keyword">new</span> myComparator());
+
+    minHeap.offer(<span class="hljs-keyword">new</span> Point(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, matrix[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]));
+    marked[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-keyword">true</span>;
+    <span class="hljs-keyword">int</span> res = Integer.MIN_VALUE;
+
+    <span class="hljs-keyword">while</span> (k &gt; <span class="hljs-number">0</span>) {
+      Point cur = minHeap.poll();
+      <span class="hljs-keyword">int</span> x = cur.x;
+      <span class="hljs-keyword">int</span> y = cur.y;
+      <span class="hljs-keyword">if</span> (x + <span class="hljs-number">1</span> &lt; row &amp;&amp; !marked[x + <span class="hljs-number">1</span>][y]) {
+        minHeap.offer(<span class="hljs-keyword">new</span> Point(x + <span class="hljs-number">1</span>, y, matrix[x + <span class="hljs-number">1</span>][y]));
+        marked[x + <span class="hljs-number">1</span>][y] = <span class="hljs-keyword">true</span>;
+      }
+      <span class="hljs-keyword">if</span> (y + <span class="hljs-number">1</span> &lt; col &amp;&amp; !marked[x][y + <span class="hljs-number">1</span>]) {
+        minHeap.offer(<span class="hljs-keyword">new</span> Point(x, y + <span class="hljs-number">1</span>, matrix[x][y + <span class="hljs-number">1</span>]));
+        marked[x][y + <span class="hljs-number">1</span>] = <span class="hljs-keyword">true</span>;
+      }
+      res = cur.val;
+      k--;
+    }
+    <span class="hljs-keyword">return</span> res;
+  }
+
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>{
+    <span class="hljs-keyword">int</span> x;
+    <span class="hljs-keyword">int</span> y;
+    <span class="hljs-keyword">int</span> val;
+    Point (<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">int</span> val) {
+      <span class="hljs-keyword">this</span>.x = x;
+      <span class="hljs-keyword">this</span>.y = y;
+      <span class="hljs-keyword">this</span>.val = val;
+    }
+  }
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myComparator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Comparator</span>&lt;<span class="hljs-title">Point</span>&gt; </span>{
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span> <span class="hljs-params">(Point o1, Point o2)</span> </span>{
+      <span class="hljs-keyword">if</span> (o1.val == o2.val)
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+      <span class="hljs-keyword">return</span> o1.val - o2.val;
+    }
+  }</code></pre>
+                <p><strong>Kth Smallest in Sorted Matrix (I)</strong></p><pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">kthSmallest</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix, <span class="hljs-keyword">int</span> k)</span> </span>{
+        <span class="hljs-keyword">if</span> (matrix == <span class="hljs-keyword">null</span>)
+        <span class="hljs-keyword">return</span> Integer.MIN_VALUE;
+        <span class="hljs-keyword">int</span> row = matrix.length;
+        <span class="hljs-keyword">int</span> col = matrix[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">int</span> start = matrix[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>], end = matrix[row - <span class="hljs-number">1</span>][col - <span class="hljs-number">1</span>];
+
+        <span class="hljs-keyword">while</span> (start &lt;= end) {
+            <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+            <span class="hljs-keyword">int</span> count = notLarger(matrix, mid);
+            <span class="hljs-keyword">if</span> (count &lt; k) {
+                start = mid + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+                end = mid - <span class="hljs-number">1</span>;
+            }
+        }
+        <span class="hljs-keyword">return</span> start;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">notLarger</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] m, <span class="hljs-keyword">int</span> cur)</span> </span>{
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> row = m.length;
+        <span class="hljs-keyword">int</span> col = m[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> j = col - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span> (i &lt; row &amp;&amp; j &gt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">if</span> (cur &lt; m[i][j]) {
+                j—;<span class="hljs-comment">//move to left col</span>
+            } <span class="hljs-keyword">else</span> {
+                count += j + <span class="hljs-number">1</span>;<span class="hljs-comment">//All elems left in cur row are valid</span>
+                i++;
+            }
+        }
+        <span class="hljs-keyword">return</span> count;
+  }</code></pre>
+                <h2 id="kth-largest-in-array">Kth largest in Array</h2><div class="gb-video" data-videoid="216964"><div class="flowplayer is-splash is-mouseout is-paused" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="23" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: hidden; animation-duration: 1s; animation-delay: 0.2s; animation-name: none;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui" title="Hit ? for help">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <pre><code class="lang-Java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findKthLargest</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> k)</span> </span>{
+        <span class="hljs-keyword">if</span>(nums == <span class="hljs-keyword">null</span> || nums.length &lt; k)
+            <span class="hljs-keyword">return</span> Integer.MIN_VALUE;
+
+        <span class="hljs-keyword">return</span> findKthLargest(nums, <span class="hljs-number">0</span>, nums.length - <span class="hljs-number">1</span>, nums.length - k);  <span class="hljs-comment">//Change to 0 based kth smallest</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findKthLargest</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, <span class="hljs-keyword">int</span> k)</span> </span>{<span class="hljs-comment">// quick select: kth smallest</span>
+    <span class="hljs-keyword">if</span> (start &gt; end) {
+        <span class="hljs-keyword">return</span> Integer.MIN_VALUE;
+    }
+
+    <span class="hljs-keyword">int</span> pivot = nums[end];<span class="hljs-comment">// Take nums[end] as the pivot</span>
+    <span class="hljs-keyword">int</span> pos = start;
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = start; i &lt; end; i++) {
+        <span class="hljs-keyword">if</span> (nums[i] &lt;= pivot) {<span class="hljs-comment">//if curVal &lt;= pivot, pos++, i++, swap(pos, i)</span>
+            swap(nums, pos++, i);
+        }
+    }
+
+    swap(nums, pos, end);<span class="hljs-comment">// set pivot to the partition position</span>
+
+    <span class="hljs-keyword">if</span> (pos == k) {<span class="hljs-comment">// Found</span>
+        <span class="hljs-keyword">return</span> nums[pos];
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">return</span> pos &lt; k ? findKthLargest(nums, pos + <span class="hljs-number">1</span>, end, k) : findKthLargest(nums, start, pos - <span class="hljs-number">1</span>, k);
+    }
+}
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">if</span> (arr[i] == arr[j]) {
+            <span class="hljs-keyword">return</span>;
+        } <span class="hljs-keyword">else</span> {
+            arr[i] ^= arr[j];
+            arr[j] ^= arr[i];
+            arr[i] ^= arr[j];
+        }
+}
+</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>

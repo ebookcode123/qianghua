@@ -1,0 +1,489 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="10月4日视频回放">10月4日视频回放</h1><div class="gb-video" data-videoid="225394"><div class="flowplayer is-splash is-mouseout is-paused" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="27" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui" title="Hit ? for help">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+
+                <h2 id="minimum-path-sum">Minimum Path Sum</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minPathSum2</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">int</span>[] col = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span> [grid[<span class="hljs-number">0</span>].length];
+        <span class="hljs-comment">//Initiate first line</span>
+        col[<span class="hljs-number">0</span>] = grid[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; grid[<span class="hljs-number">0</span>].length; j++) {
+            col[j] = grid[<span class="hljs-number">0</span>][j] + col[j-<span class="hljs-number">1</span>];
+        }
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; grid.length; i++){
+            col[<span class="hljs-number">0</span>] += grid[i][<span class="hljs-number">0</span>];<span class="hljs-comment">//Calculate first elem</span>
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt; grid[<span class="hljs-number">0</span>].length; j++){
+                col[j] = grid[i][j] + Math.min(col[j], col[j - <span class="hljs-number">1</span>]);<span class="hljs-comment">//Find min of left and up elem</span>
+            }
+        }
+        <span class="hljs-keyword">return</span> col[grid[<span class="hljs-number">0</span>].length-<span class="hljs-number">1</span>];
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minPathSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">int</span>[][] minLen = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[grid.length][grid[<span class="hljs-number">0</span>].length];
+        <span class="hljs-keyword">return</span> helper(grid, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, minLen);
+    }
+
+
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">helper</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span>[][] minLen)</span> </span>{
+        <span class="hljs-keyword">if</span>(row == grid.length - <span class="hljs-number">1</span> &amp;&amp; col == grid[<span class="hljs-number">0</span>].length - <span class="hljs-number">1</span>) {
+                <span class="hljs-keyword">return</span> grid[row][col];
+        }
+
+    <span class="hljs-keyword">if</span>(minLen[row][col] != <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> minLen[row][col];
+    }
+
+
+
+    <span class="hljs-keyword">int</span> down = Integer.MAX_VALUE;
+    <span class="hljs-keyword">int</span> right = Integer.MAX_VALUE;
+    <span class="hljs-keyword">if</span>(row &lt; grid.length - <span class="hljs-number">1</span>) {
+        down = helper(grid, row + <span class="hljs-number">1</span>, col, minLen);
+
+    }
+    <span class="hljs-keyword">if</span>(col &lt; grid[<span class="hljs-number">0</span>].length-<span class="hljs-number">1</span>) {
+        right = helper(grid, row, col + <span class="hljs-number">1</span>, minLen);
+    }
+    minLen[row][col] = Math.min(down, right) + grid[row][col];
+    <span class="hljs-keyword">return</span> minLen[row][col];
+}
+}</code></pre>
+                <h2 id="regular-expression-matching">Regular Expression Matching</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isMatch</span><span class="hljs-params">(String s, String p)</span> </span>{
+        <span class="hljs-keyword">if</span> (s == <span class="hljs-keyword">null</span> || p == <span class="hljs-keyword">null</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        <span class="hljs-keyword">int</span>[][] match = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[s.length() + <span class="hljs-number">1</span>][p.length() + <span class="hljs-number">1</span>];
+        helper(s, p, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, match);
+        <span class="hljs-keyword">return</span> match[s.length()][p.length()] == <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">helper</span><span class="hljs-params">(String s, String p, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span>[][] match)</span> </span>{
+        <span class="hljs-comment">//Base Case:</span>
+        <span class="hljs-keyword">if</span> (j == p.length()) {
+            match[i][j] = (i == s.length()) ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">return</span> match[i][j] == <span class="hljs-number">1</span>;
+        }
+
+        <span class="hljs-keyword">if</span> (match[i][j] != <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> match[i][j] == <span class="hljs-number">1</span>;
+        }
+
+
+        <span class="hljs-comment">//Case 1: p[i + 1] != "*"</span>
+        <span class="hljs-keyword">if</span> (j &lt; p.length() - <span class="hljs-number">1</span> &amp;&amp; p.charAt(j + <span class="hljs-number">1</span>) == <span class="hljs-string">'*'</span>) {
+            match[i][j] = (i &lt; s.length() &amp;&amp; (s.charAt(i) == p.charAt(j) || p.charAt(j) == <span class="hljs-string">'.'</span>) &amp;&amp; helper(s, p, i + <span class="hljs-number">1</span>, j, match) || helper(s, p, i, j + <span class="hljs-number">2</span>, match)) ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {<span class="hljs-comment">//Case 2: p[i + 1] == '*'</span>
+            match[i][j] = (i &lt; s.length() &amp;&amp; (s.charAt(i) == p.charAt(j) || p.charAt(j) == <span class="hljs-string">'.'</span>) &amp;&amp; helper(s, p, i + <span class="hljs-number">1</span>, j + <span class="hljs-number">1</span>, match)) ? <span class="hljs-number">1</span> : -<span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> match[i][j] == <span class="hljs-number">1</span>;
+    }
+
+
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">helper2</span><span class="hljs-params">(String s, String p, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-comment">//Base Case:</span>
+        <span class="hljs-keyword">if</span> (j == p.length())
+            <span class="hljs-keyword">return</span> i == s.length();
+
+        <span class="hljs-comment">//Case 1: p[i + 1] != "*"</span>
+        <span class="hljs-keyword">if</span> (j == p.length() - <span class="hljs-number">1</span> || p.charAt(j + <span class="hljs-number">1</span>) != <span class="hljs-string">'*'</span>) {
+            <span class="hljs-keyword">if</span> (i == s.length() || (s.charAt(i) != p.charAt(j) &amp;&amp; p.charAt(j) != <span class="hljs-string">'.'</span>))
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+            <span class="hljs-keyword">else</span>
+                <span class="hljs-keyword">return</span> helper2(s, p, i + <span class="hljs-number">1</span>, j + <span class="hljs-number">1</span>);
+        }
+
+
+
+        <span class="hljs-comment">//Case 2: p[i + 1] == "*"</span>
+        <span class="hljs-keyword">while</span> (i &lt; s.length() &amp;&amp; (s.charAt(i) == p.charAt(j) || p.charAt(j) == <span class="hljs-string">'.'</span>)) {
+            <span class="hljs-keyword">if</span>(helper2(s, p, i, j + <span class="hljs-number">2</span>))<span class="hljs-comment">//* match preceding i chars</span>
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            i++;
+        }
+        <span class="hljs-keyword">return</span> helper2(s, p, i, j + <span class="hljs-number">2</span>);<span class="hljs-comment">//* match preceding 0 chars</span>
+    }
+}
+</code></pre>
+                <h2 id="paint-house-i">Paint House I</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minCost</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] costs)</span> </span>{
+        <span class="hljs-comment">//Method: DP m[i][k] (k = 0 ~ 2) represents min cost till</span>
+          <span class="hljs-function">house i when i using color k
+        <span class="hljs-title">if</span><span class="hljs-params">(costs == <span class="hljs-keyword">null</span> || costs.length == <span class="hljs-number">0</span>)</span>
+            return 0</span>;
+        <span class="hljs-keyword">if</span>(costs[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || costs[<span class="hljs-number">0</span>].length != <span class="hljs-number">3</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-comment">//Init</span>
+        <span class="hljs-keyword">int</span>[] last = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];
+        <span class="hljs-keyword">int</span>[] cur = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];
+        <span class="hljs-comment">//Induction Rule: m[i][k] = costs[i][k] + Math.min(</span>
+                                m[i - <span class="hljs-number">1</span>][(k + <span class="hljs-number">1</span>) % <span class="hljs-number">3</span>], m[i - <span class="hljs-number">1</span>][(k + <span class="hljs-number">2</span>) % <span class="hljs-number">3</span>]);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] cost : costs) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+                cur[i] = cost[i] + Math.min(last[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">3</span>], last[(i + <span class="hljs-number">2</span>) % <span class="hljs-number">3</span>]);
+            }
+            <span class="hljs-keyword">int</span>[] tmp = cur;
+            cur = last;
+            last = tmp;
+        }
+        <span class="hljs-keyword">return</span> Math.min(last[<span class="hljs-number">0</span>], Math.min(last[<span class="hljs-number">1</span>], last[<span class="hljs-number">2</span>]));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minCost2</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] costs)</span> </span>{
+        <span class="hljs-comment">//Method 2: DP, using an int[3] last represent the last min costs in 3 diff track</span>
+        <span class="hljs-comment">//using an int[3] next represent the cur min costs in 3 diff track</span>
+        <span class="hljs-keyword">if</span>(costs == <span class="hljs-keyword">null</span> || costs.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span>(costs[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || costs[<span class="hljs-number">0</span>].length != <span class="hljs-number">3</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">int</span>[] last = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];
+        <span class="hljs-keyword">int</span>[] cur = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">3</span>];
+
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span>[] curCosts : costs) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+                cur[i] = curCosts[i] + Math.min(last[(i + <span class="hljs-number">1</span>) % <span class="hljs-number">3</span>], last[(i + <span class="hljs-number">2</span>) % <span class="hljs-number">3</span>]);
+            }
+            <span class="hljs-comment">//Swap cur and last</span>
+            <span class="hljs-keyword">int</span>[] tmp = cur;
+            cur = last;
+            last = tmp;
+        }
+        <span class="hljs-keyword">return</span> Math.min(last[<span class="hljs-number">0</span>], Math.min(last[<span class="hljs-number">1</span>], last[<span class="hljs-number">2</span>]));
+    }
+}</code></pre>
+                <h2 id="paint-house-ii">Paint House II</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minCostII</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] costs)</span> </span>{
+        <span class="hljs-comment">//Method DP: Using an int[k] last representing the last min costs in k tracks</span>
+        <span class="hljs-comment">//Using an int[k] cur representing the current min costs</span>
+        <span class="hljs-keyword">if</span>(costs == <span class="hljs-keyword">null</span> || costs.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span>(costs[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || costs[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> col = costs[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">int</span>[] last = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[col];
+        <span class="hljs-keyword">int</span>[] cur = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[col];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span>[] cost : costs) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; col; i++) {
+                cur[i] = cost[i] + findMin(last, i);
+            }
+            <span class="hljs-keyword">int</span>[] tmp = cur;
+            cur = last;
+            last = tmp;
+        }
+        <span class="hljs-keyword">return</span> findMin(last, last.length);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findMin</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> except)</span> </span>{
+        <span class="hljs-keyword">int</span> min = Integer.MAX_VALUE;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) {
+            <span class="hljs-keyword">if</span>(i != except) {
+                min = Math.min(min, arr[i]);
+            }
+        }
+        <span class="hljs-keyword">return</span> min == Integer.MAX_VALUE ? <span class="hljs-number">0</span> : min;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minCostII2</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] costs)</span> </span>{
+        <span class="hljs-keyword">if</span>(costs == <span class="hljs-keyword">null</span> || costs.length == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">int</span> m = costs.length, n = costs[<span class="hljs-number">0</span>].length;
+          <span class="hljs-keyword">int</span> lastMin = <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">int</span> lastSec = <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">int</span> lastIndex = -<span class="hljs-number">1</span>;
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] cost : costs) {
+              <span class="hljs-keyword">int</span> curMin = Integer.MAX_VALUE;
+              <span class="hljs-keyword">int</span> curSec = m;
+              <span class="hljs-keyword">int</span> curIndex = -<span class="hljs-number">1</span>;
+              <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+                  <span class="hljs-keyword">int</span> val = cost[j] + (j == lastIndex ? lastSec : lastMin);
+                  <span class="hljs-keyword">if</span>(val &lt; curMin) {
+                      curSec = curMin;
+                      curMin = val;
+                      curIndex = j;
+                  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(val &lt; curSec) {
+                      curSec = val;
+                  }
+            }
+            lastMin = curMin;
+            lastSec = curSec;
+            lastIndex = curIndex;
+        }
+        <span class="hljs-keyword">return</span> lastMin;
+    }
+}</code></pre>
+                <h2 id="maximum-product-subarray">Maximum Product Subarray</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProduct</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+         <span class="hljs-keyword">if</span>(nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> max = nums[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> min = nums[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> globalMax = max;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i++) {
+            <span class="hljs-keyword">int</span> tmp = max;
+            max = Math.max(Math.max(max * nums[i], min * nums[i]), nums[i]);
+            min = Math.min(Math.min(tmp * nums[i], min * nums[i]), nums[i]);
+            globalMax = Math.max(globalMax, max);
+        }
+        <span class="hljs-keyword">return</span> globalMax;
+    }
+}</code></pre>
+                <h2 id="jump-gameii">Jump GameII</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">jump</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">if</span>(nums == <span class="hljs-keyword">null</span> || nums.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span>[] min = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nums.length];
+        min[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> curIndex = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i++){
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = curIndex; j &lt; i; j++){
+                <span class="hljs-keyword">if</span>(nums[j] + j &gt;= i){
+                    min[i] = min[j] + <span class="hljs-number">1</span>;
+                    curIndex = j;
+                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">//Stop at the leftmost one</span>
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> min[nums.length - <span class="hljs-number">1</span>];
+    }
+}</code></pre>
+                <h2 id="unique-binary-search-treeii">Unique Binary Search TreeII</h2><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;TreeNode&gt; <span class="hljs-title">generateTrees</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        List&lt;TreeNode&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> res;
+        }
+        <span class="hljs-keyword">int</span>[] count = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n + <span class="hljs-number">1</span>];
+        count[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
+                count[i] += count[j] * count[i - j - <span class="hljs-number">1</span>];
+            }
+        }
+        TreeNode[] resarr =  helper(<span class="hljs-number">1</span>, n, count);
+        res = Arrays.asList(resarr);
+        <span class="hljs-keyword">return</span> res;
+    }
+    <span class="hljs-keyword">private</span> TreeNode[] helper(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end, <span class="hljs-keyword">int</span>[] count){
+        <span class="hljs-keyword">if</span>(start &gt; end){
+            TreeNode[] roots = <span class="hljs-keyword">new</span> TreeNode[<span class="hljs-number">1</span>];
+            roots[<span class="hljs-number">0</span>] = <span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">return</span> roots;
+        }
+        TreeNode[] roots = <span class="hljs-keyword">new</span> TreeNode[count[end - start + <span class="hljs-number">1</span>]];
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = start; i &lt;= end; i++){
+            TreeNode[] lefts = helper(start, i - <span class="hljs-number">1</span>, count);
+            TreeNode[] rights = helper(i + <span class="hljs-number">1</span>, end, count);
+            <span class="hljs-keyword">for</span>(TreeNode left : lefts){
+                <span class="hljs-keyword">for</span>(TreeNode right : rights){
+                    roots[index] = <span class="hljs-keyword">new</span> TreeNode(i);
+                    roots[index].left = left;
+                    roots[index++].right = right;
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> roots;
+    }
+}</code></pre>
+                <h2 id="range-sum-query---mutable">Range Sum Query - Mutable</h2><p><strong>1. Binary Index Tree</strong></p><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumArray</span> </span>{
+    <span class="hljs-keyword">int</span>[] nums;
+    <span class="hljs-keyword">int</span>[] bit;<span class="hljs-comment">//Binary Index Tree</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        <span class="hljs-keyword">this</span>.nums = nums;
+        <span class="hljs-keyword">this</span>.bit = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[nums.length + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
+            init(i, nums[i]);
+        }
+    }
+    <span class="hljs-comment">//   i      1   2   3   4   5   6   7   8</span>
+    <span class="hljs-comment">//i &amp; (-i)  1   2   1   4   1   2   1   8</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt;= nums.length; j += j &amp; (-j)) {
+            bit[j] += val;
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">int</span> diff = val - nums[i];
+        nums[i] = val;
+        init(i, diff);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getSum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &gt; <span class="hljs-number">0</span>; j -= j &amp; (-j)) {
+            sum += bit[j];
+        }
+        <span class="hljs-keyword">return</span> sum;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRange</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">return</span> getSum(j) - getSum(i - <span class="hljs-number">1</span>);
+    }
+}</code></pre>
+                <p><strong>2. Segment Tree</strong></p><pre><code class="lang-Java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumArray</span> </span>{
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SegmentTreeNode</span> </span>{
+        <span class="hljs-keyword">int</span> start;
+        <span class="hljs-keyword">int</span> end;
+        SegmentTreeNode left, right;
+        <span class="hljs-keyword">int</span> sum;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SegmentTreeNode</span><span class="hljs-params">(<span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+            <span class="hljs-keyword">this</span>.start = start;
+            <span class="hljs-keyword">this</span>.end = end;
+            <span class="hljs-keyword">this</span>.left = <span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">this</span>.right = <span class="hljs-keyword">null</span>;
+            <span class="hljs-keyword">this</span>.sum = <span class="hljs-number">0</span>;
+        }
+    }
+    SegmentTreeNode root = <span class="hljs-keyword">null</span>;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        root = build(nums, <span class="hljs-number">0</span>, nums.length - <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> SegmentTreeNode <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        <span class="hljs-keyword">if</span> (start &gt; end) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        SegmentTreeNode root = <span class="hljs-keyword">new</span> SegmentTreeNode(start, end);
+        <span class="hljs-keyword">if</span> (start == end) {
+            root.sum = nums[end];
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">int</span> mid = start  + (end - start) / <span class="hljs-number">2</span>;
+            root.left = build(nums, start, mid);
+            root.right = build(nums, mid + <span class="hljs-number">1</span>, end);
+            root.sum = root.left.sum + root.right.sum;
+        }
+        <span class="hljs-keyword">return</span> root;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> val)</span> </span>{
+        update(root, i, val);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">(SegmentTreeNode root, <span class="hljs-keyword">int</span> index, <span class="hljs-keyword">int</span> newVal)</span> </span>{
+        <span class="hljs-keyword">if</span> (root.start == root.end) {
+           root.sum = newVal;
+           <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">int</span> mid = root.start + (root.end - root.start) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (mid &gt;= index) {
+            update(root.left, index, newVal);
+        } <span class="hljs-keyword">else</span> {
+            update(root.right, index, newVal);
+        }
+        root.sum = root.left.sum + root.right.sum;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRange</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">return</span> sumRange(root, i, j);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRange</span><span class="hljs-params">(SegmentTreeNode root, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        <span class="hljs-keyword">if</span> (root.end == end &amp;&amp; root.start == start) {
+            <span class="hljs-keyword">return</span> root.sum;
+        }
+        <span class="hljs-keyword">int</span> mid = root.start + (root.end - root.start) / <span class="hljs-number">2</span>;
+        <span class="hljs-keyword">if</span> (mid &gt;= end) {
+            <span class="hljs-keyword">return</span> sumRange(root.left, start, end);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (mid &lt; start) {
+            <span class="hljs-keyword">return</span> sumRange(root.right, start, end);
+        }  <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> sumRange(root.left, start, mid) + sumRange(root.right, mid + <span class="hljs-number">1</span>, end);
+        }
+    }
+}</code></pre>
+                <h2 id="range-sum-query-2d---mutable">Range Sum Query 2D - Mutable</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NumMatrix</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] bit;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] m;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NumMatrix</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix)</span> </span>{
+        <span class="hljs-keyword">if</span> (matrix.length == <span class="hljs-number">0</span> || matrix[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">this</span>.bit = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[matrix.length + <span class="hljs-number">1</span>][matrix[<span class="hljs-number">0</span>].length + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">this</span>.m = matrix;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; matrix.length; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; matrix[<span class="hljs-number">0</span>].length; j++) {
+                init(i, j, matrix[i][j]);
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = row + <span class="hljs-number">1</span>; i &lt;= m.length; i += i &amp; (-i)) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = col + <span class="hljs-number">1</span>; j &lt;= m[<span class="hljs-number">0</span>].length; j += j &amp; (-j)) {
+                bit[i][j] += val;
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span> val)</span> </span>{
+        <span class="hljs-keyword">int</span> diff = val - m[row][col];
+        m[row][col] = val;
+        init(row, col, diff);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sumRegion</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row1, <span class="hljs-keyword">int</span> col1, <span class="hljs-keyword">int</span> row2, <span class="hljs-keyword">int</span> col2)</span> </span>{
+        <span class="hljs-keyword">return</span> sum(row2, col2) + sum(row1 - <span class="hljs-number">1</span>, col1 - <span class="hljs-number">1</span>) - sum(row1 - <span class="hljs-number">1</span>, col2) - sum(row2, col1 - <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">sum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col)</span> </span>{
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = row + <span class="hljs-number">1</span>; i &gt; <span class="hljs-number">0</span>; i -= i &amp; (-i)) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = col + <span class="hljs-number">1</span>; j &gt; <span class="hljs-number">0</span>; j -= j &amp; (-j)) {
+                sum += bit[i][j];
+            }
+        }
+        <span class="hljs-keyword">return</span> sum;
+    }
+}</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>

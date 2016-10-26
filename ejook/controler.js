@@ -39,7 +39,7 @@ OB.config(['$routeProvider', function ($routeProvider) {
             controller: 'navRepeat'
         });
 
-// console.log('view/' + indexlayer[index1].first + '.html');
+console.log('view/' + indexlayer[index1].first + '.html');
 
             for(var index2 in indexlayer[index1].second){
                 console.log('view/'+indexlayer[index1].second[index2]+'.html');

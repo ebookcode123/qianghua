@@ -1,0 +1,546 @@
+<div class="page-inner">
+    <div id="book-search-results">
+        <div class="search-noresults">
+            <section class="normal markdown-section">
+                <h1 id="9月27日视频回放（已更新）">9月27日视频回放（已更新）</h1><div class="gb-video" data-videoid="220040"><div class="flowplayer is-splash is-mouseout is-paused" data-analytics="UA-68088696-2" data-rtmp="rtmp://rtmp.flowplayer.org/cfx/st/" data-ratio="0.6250" data-embed="false" data-flowplayer-instance-id="24" style="background-image: url(&quot;//cdn-i2.tianmaying.com/public/img/videosplash.png&quot;);">
+
+
+                <div class="fp-ratio" style="padding-top: 56.25%;"></div><div class="fp-player"><div class="buttons">
+                <span class="active">1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+            </div><div class="endscreen text-center">
+
+
+                <div class="vip-bg" style="margin-top: 15%; padding-bottom: 20px; box-shadow: none; margin-right: 10px; margin-left: 10px;">
+                    <a href="/premiumMembership">
+                        <div class="text-center">
+                            <h1 class="vip-header" style="color:white; font-size:20px;"><strong>加入太阁VIP</strong></h1>
+                        </div>
+
+                        <div class="row wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" style="padding-top: 20px; color: rgb(51, 122, 183); visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <div style="display:inline-block; width:50px; height:50px;">
+                                    <img src="//cdn-i2.tianmaying.com/public/img/icons/vipLarge.png" style="width:35px;">
+                                </div>
+                                <p style="font-size:15px; font-weight:bold; padding-left:15px;">太阁程序员面试宝典（算法设计、系统设计、数据科学、职业发展、实战项目）</p>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-microphone"></span>
+                                <p style="font-size:15px; font-weight:bold;">VIP用户能够观看硅谷之路全部上百篇视频的完整版 VS 普通用户能够观看最近三天视频的完整版</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 col-xs-12 text-center" style="padding:5px;">
+                                <span class="purple-discussion"></span>
+                                <p style="font-size:15px; font-weight:bold; padding-right:15px;">支持太阁实验室推出更多更好的内容</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <a class="fp-toggle">Play video again</a>
+            </div><div class="fp-ui" title="Hit ? for help">         <div class="fp-waiting"><em></em><em></em><em></em></div>         <a class="fp-fullscreen"></a>         <a class="fp-unload"></a>         <p class="fp-speed"></p>         <div class="fp-controls">            <a class="fp-play"></a>            <div class="fp-timeline">               <div class="fp-buffer"></div>               <div class="fp-progress animated" style="transition-duration: 0ms; width: 0%;"></div>            </div>            <div class="fp-timeline-tooltip fp-tooltip"></div>            <div class="fp-volume">               <a class="fp-mute"></a>               <div class="fp-volumeslider">                  <div class="fp-volumelevel"></div>               </div>            </div>         <a href="http://flowplayer.org" class="fp-brand">flowplayer</a></div>         <div class="fp-time">            <em class="fp-elapsed">00:00</em>            <em class="fp-remaining"></em>            <em class="fp-duration">00:00</em>         </div>         <div class="fp-message"><h2></h2><p></p></div></div><div class="fp-help">         <a class="fp-close"></a>         <div class="fp-help-section fp-help-basics">            <p><em>space</em>play / pause</p>            <p><em>q</em>unload | stop</p>            <p><em>f</em>fullscreen</p><p><em>shift</em> + <em>←</em><em>→</em>slower / faster</p>         </div>         <div class="fp-help-section">            <p><em>↑</em><em>↓</em>volume</p>            <p><em>m</em>mute</p>         </div>         <div class="fp-help-section">            <p><em>←</em><em>→</em>seek</p>            <p><em>&nbsp;. </em>seek to previous            </p><p><em>1</em><em>2</em>… <em>6</em> seek to 10%, 20% … 60% </p>         </div>   </div><div class="fp-context-menu"><ul><li class="copyright">© 2015</li><li><a href="http://flowplayer.org">About Flowplayer</a></li><li><a href="http://flowplayer.org/license">GPL based license</a></li></ul></div></div><a href="http://flowplayer.org" style="display: none;"></a></div></div>
+
+
+
+                <h2 id="factor-combination">Factor Combination</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; getFactors(<span class="hljs-keyword">int</span> n) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        List&lt;Integer&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        helper(res, list, n, <span class="hljs-number">2</span>);
+        <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; res,
+                        List&lt;Integer&gt; list, <span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> startFactor)</span></span>{
+        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">if</span> (list.size() &gt; <span class="hljs-number">1</span>) {
+               res.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(list));
+            }
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = startFactor; i &lt;= Math.sqrt(n); i++) {
+           <span class="hljs-keyword">if</span> (n % i == <span class="hljs-number">0</span>) {
+               list.add(i);
+               helper(res, list, n/i, i);
+              list.remove(list.size()-<span class="hljs-number">1</span>);
+          }
+        }
+        <span class="hljs-comment">//Add base case</span>
+        list.add(n);
+        helper(res, list, <span class="hljs-number">1</span>, n);
+        list.remove(list.size() - <span class="hljs-number">1</span>);
+    }</code></pre>
+                <h2 id="sudoku-solver">Sudoku Solver</h2><pre><code class="lang-JAVA"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">solveSudoku</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board)</span> </span>{
+        <span class="hljs-keyword">if</span> (board == <span class="hljs-keyword">null</span> || board.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span>;
+        <span class="hljs-keyword">if</span> (board[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || board[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span>;
+        dfsHelper(board, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">dfsHelper</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-comment">//Base Case:</span>
+        <span class="hljs-keyword">while</span> (board[i][j] != <span class="hljs-string">'.'</span>) {
+            j++;
+            <span class="hljs-keyword">if</span> (j == <span class="hljs-number">9</span>) {
+                <span class="hljs-keyword">if</span> (i == <span class="hljs-number">8</span>)
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+                i++;
+                j = <span class="hljs-number">0</span>;
+            }
+        }
+        <span class="hljs-keyword">boolean</span>[] rowChecker = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[<span class="hljs-number">9</span>];
+        <span class="hljs-keyword">boolean</span>[] colChecker = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[<span class="hljs-number">9</span>];
+        <span class="hljs-keyword">boolean</span>[] subChecker = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[<span class="hljs-number">9</span>];
+
+        fillCheckers(board, rowChecker, colChecker, subChecker, i, j);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> cur = <span class="hljs-number">1</span>; cur &lt;= <span class="hljs-number">9</span>; cur++) {
+            board[i][j] = (<span class="hljs-keyword">char</span>)(cur + <span class="hljs-string">'0'</span>);
+            <span class="hljs-keyword">if</span> (check(board, rowChecker, colChecker, subChecker, i, j, cur)
+                                                  &amp;&amp; dfsHelper(board, i, j)) {
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+            board[i][j] = <span class="hljs-string">'.'</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">fillCheckers</span> <span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board, <span class="hljs-keyword">boolean</span>[] rowChecker,
+              <span class="hljs-keyword">boolean</span>[] colChecker, <span class="hljs-keyword">boolean</span>[] subChecker, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col)</span> </span>{
+        <span class="hljs-comment">//Fill row</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">9</span>; j++) {
+            <span class="hljs-keyword">if</span> (board[row][j] != <span class="hljs-string">'.'</span>) {
+                rowChecker[board[row][j] - <span class="hljs-string">'1'</span>] = <span class="hljs-keyword">true</span>;
+            }
+        }
+        <span class="hljs-comment">//Fill col</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">9</span>; i++) {
+            <span class="hljs-keyword">if</span> (board[i][col] != <span class="hljs-string">'.'</span>)
+                colChecker[board[i][col] - <span class="hljs-string">'1'</span>] = <span class="hljs-keyword">true</span>;
+        }
+        <span class="hljs-comment">//Fill subM</span>
+        <span class="hljs-keyword">int</span> startX = row/<span class="hljs-number">3</span> * <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">int</span> startY = col/<span class="hljs-number">3</span> * <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = startX; i &lt; startX + <span class="hljs-number">3</span>; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = startY; j &lt; startY + <span class="hljs-number">3</span>; j++) {
+                <span class="hljs-keyword">if</span> (board[i][j] != <span class="hljs-string">'.'</span>)
+                    subChecker[board[i][j] - <span class="hljs-string">'1'</span>] = <span class="hljs-keyword">true</span>;
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">check</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board, <span class="hljs-keyword">boolean</span>[] rowChecker,
+                          <span class="hljs-keyword">boolean</span>[] colChecker, <span class="hljs-keyword">boolean</span>[] subChecker,
+                         <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col, <span class="hljs-keyword">int</span> toFill)</span> </span>{
+        <span class="hljs-keyword">if</span> (rowChecker[toFill - <span class="hljs-number">1</span>] || colChecker[toFill - <span class="hljs-number">1</span>]
+              || subChecker[toFill - <span class="hljs-number">1</span>]){
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+              }
+        <span class="hljs-keyword">else</span>
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>
+    }</code></pre>
+                <h2 id="merge-k-sorted-list">Merge K Sorted List</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">mergeKLists_Heap</span><span class="hljs-params">(ListNode[] lists)</span> </span>{
+        <span class="hljs-keyword">if</span>(lists == <span class="hljs-keyword">null</span> || lists.length == <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        <span class="hljs-keyword">if</span>(lists.length == <span class="hljs-number">1</span>)
+            <span class="hljs-keyword">return</span> lists[<span class="hljs-number">0</span>];
+        <span class="hljs-comment">//Method: minHeap</span>
+        PriorityQueue&lt;ListNode&gt; minHeap =
+                <span class="hljs-keyword">new</span> PriorityQueue&lt;ListNode&gt;(lists.length, <span class="hljs-keyword">new</span> MyComparator());
+        ListNode dummy = <span class="hljs-keyword">new</span> ListNode(<span class="hljs-number">0</span>);
+        ListNode prev = dummy;
+        <span class="hljs-comment">//1. Put all first nodes into minHeap</span>
+        <span class="hljs-keyword">for</span>(ListNode n : lists) {
+            <span class="hljs-keyword">if</span>(n != <span class="hljs-keyword">null</span>)
+                minHeap.add(n);
+        }
+        <span class="hljs-comment">//2. find min elem in minHeap</span>
+        <span class="hljs-keyword">while</span>(!minHeap.isEmpty()) {
+            ListNode next = minHeap.poll();
+            <span class="hljs-keyword">if</span>(next.next != <span class="hljs-keyword">null</span>)
+                minHeap.add(next.next);
+            prev.next = next;
+            prev = prev.next;
+        }
+        <span class="hljs-keyword">return</span> dummy.next;
+    }
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComparator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Comparator</span>&lt;<span class="hljs-title">ListNode</span>&gt; </span>{
+        <span class="hljs-meta">@Override</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(ListNode o1, ListNode o2)</span> </span>{
+            <span class="hljs-keyword">if</span>(o1.val == o2.val)
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">else</span>
+                <span class="hljs-keyword">return</span> o1.val &lt; o2.val ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">mergeKLists_BinaryDeduction</span><span class="hljs-params">(ListNode[] lists)</span> </span>{
+        <span class="hljs-keyword">if</span> (lists == <span class="hljs-keyword">null</span> || lists.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+        <span class="hljs-keyword">return</span> split(lists, <span class="hljs-number">0</span>, lists.length - <span class="hljs-number">1</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">split</span> <span class="hljs-params">(ListNode[] lists, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span></span>{
+        <span class="hljs-keyword">if</span>(start == end) {
+            <span class="hljs-keyword">return</span> lists[start];
+        }
+        <span class="hljs-keyword">int</span> mid = start + (end - start) / <span class="hljs-number">2</span>;
+        ListNode head1 = split(lists, start, mid);
+        ListNode head2 = split(lists, mid + <span class="hljs-number">1</span>, end);
+        <span class="hljs-keyword">return</span> mergeSort(head1, head2);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> ListNode <span class="hljs-title">mergeSort</span><span class="hljs-params">(ListNode head1,ListNode head2)</span></span>{
+        <span class="hljs-keyword">if</span>(head1 == <span class="hljs-keyword">null</span> || head2 == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> head1 == <span class="hljs-keyword">null</span> ? head2 : head1;
+        }
+        <span class="hljs-keyword">if</span>(head1.val &lt;= head2.val){
+            head1.next = mergeSort(head1.next, head2);
+            <span class="hljs-keyword">return</span> head1;
+        } <span class="hljs-keyword">else</span> {
+            head2.next = mergeSort(head1,head2.next);
+            <span class="hljs-keyword">return</span> head2;
+        }
+    }
+}</code></pre>
+                <h2 id="find-kth-pairs-with-smallest-sums">Find Kth Pairs with Smallest Sums</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> List&lt;<span class="hljs-keyword">int</span>[]&gt; kSmallestPairs(<span class="hljs-keyword">int</span>[] nums1, <span class="hljs-keyword">int</span>[] nums2, <span class="hljs-keyword">int</span> k) {
+        List&lt;<span class="hljs-keyword">int</span>[]&gt; list = <span class="hljs-keyword">new</span> ArrayList&lt;<span class="hljs-keyword">int</span>[]&gt;();
+        <span class="hljs-keyword">if</span>(nums1 == <span class="hljs-keyword">null</span> || nums2 == <span class="hljs-keyword">null</span> ||
+                nums1.length == <span class="hljs-number">0</span> || nums2.length == <span class="hljs-number">0</span> || k &lt;= <span class="hljs-number">0</span>)
+            <span class="hljs-keyword">return</span> list;
+       PriorityQueue&lt;<span class="hljs-keyword">int</span>[]&gt; minHeap = <span class="hljs-keyword">new</span> PriorityQueue&lt;<span class="hljs-keyword">int</span>[]&gt;(
+            <span class="hljs-keyword">new</span> Comparator&lt;<span class="hljs-keyword">int</span>[]&gt;() {
+                <span class="hljs-meta">@Override</span>
+                <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] o1, <span class="hljs-keyword">int</span>[] o2)</span> </span>{
+                    <span class="hljs-keyword">int</span> sum1 = nums1[o1[<span class="hljs-number">0</span>]] + nums2[o1[<span class="hljs-number">1</span>]];
+                    <span class="hljs-keyword">int</span> sum2 = nums1[o2[<span class="hljs-number">0</span>]] + nums2[o2[<span class="hljs-number">1</span>]];
+                    <span class="hljs-keyword">if</span>(sum1 == sum2) {
+                        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                    } <span class="hljs-keyword">else</span> {
+                        <span class="hljs-keyword">return</span> sum1 &lt; sum2 ? -<span class="hljs-number">1</span> : <span class="hljs-number">1</span>;
+                    }
+                }});
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums1.length; i++) {
+            minHeap.add(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i, <span class="hljs-number">0</span>});
+        }
+        <span class="hljs-keyword">while</span>(!minHeap.isEmpty() &amp;&amp; k &gt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">int</span>[] cur = minHeap.poll();
+            list.add(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{nums1[cur[<span class="hljs-number">0</span>]], nums2[cur[<span class="hljs-number">1</span>]]});
+            <span class="hljs-keyword">if</span>(++cur[<span class="hljs-number">1</span>] &lt; nums2.length) {
+                minHeap.add(cur);
+            }
+            k--;
+        }
+        <span class="hljs-keyword">return</span> list;
+    }</code></pre>
+                <h2 id="number-of-connected-components-in-an-undirected-graph">Number of Connected Components in an Undirected Graph</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">countComponent_UnionFind</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span>[][] edges)</span> </span>{
+        <span class="hljs-keyword">int</span>[] root = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            root[i] = i;
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] edge : edges) {
+            <span class="hljs-keyword">int</span> par = findRoot(root, edge[<span class="hljs-number">0</span>]);
+            <span class="hljs-keyword">int</span> child = findRoot(root, edge[<span class="hljs-number">1</span>]);
+            root[child] = par;
+        }
+
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (root[i] == i)
+                count++;
+        }
+        <span class="hljs-keyword">return</span> count;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findRoot</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] root, <span class="hljs-keyword">int</span> cur)</span> </span>{
+        <span class="hljs-keyword">while</span> (cur != root[cur]) {
+            root[cur] = root[root[cur]];
+            cur = root[cur];
+        }
+        <span class="hljs-keyword">return</span> cur;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">countComponents_DFS</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span>[][] edges)</span> </span>{
+    <span class="hljs-keyword">int</span>[] tag = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+        tag[i] = i;
+    }
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] edge : edges) {
+        <span class="hljs-keyword">int</span> start = edge[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">int</span> end = edge[<span class="hljs-number">1</span>];
+        <span class="hljs-keyword">while</span> (tag[start] != start) {
+            start = tag[start] = tag[tag[start]];
+        }
+
+        <span class="hljs-keyword">while</span> (tag[end] != end) {
+            end = tag[end] = tag[tag[end]];
+        }
+
+        tag[start] = end;
+        <span class="hljs-keyword">if</span> (start != end)
+            n--;
+    }
+    <span class="hljs-keyword">return</span> n;
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">countComponents_BFS</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span>[][] edges)</span> </span>{
+        <span class="hljs-keyword">if</span> (edges == <span class="hljs-keyword">null</span> || edges.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> n;
+        }
+        <span class="hljs-keyword">if</span> (edges[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || edges[<span class="hljs-number">0</span>].length != <span class="hljs-number">2</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        List&lt;List&lt;Integer&gt;&gt; neis = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        <span class="hljs-keyword">boolean</span>[] isVisited = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n];
+        constructGraph(edges, neis, n);
+        <span class="hljs-keyword">int</span> count = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (!isVisited[i]) {
+                bfsHelper(i, neis, isVisited);
+                count++;
+            }
+        }
+        <span class="hljs-keyword">return</span> count;
+  }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">constructGraph</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] edges, List&lt;List&lt;Integer&gt;&gt; neis, <span class="hljs-keyword">int</span> n)</span> </span>{
+        <span class="hljs-comment">//1. Create List</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            neis.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;());
+        }
+        <span class="hljs-comment">//2. Add neighbors</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] edge : edges) {
+            System.out.println(edge[<span class="hljs-number">0</span>] + <span class="hljs-string">" "</span> + edge[<span class="hljs-number">1</span>]);
+            neis.get(edge[<span class="hljs-number">0</span>]).add(edge[<span class="hljs-number">1</span>]);
+            neis.get(edge[<span class="hljs-number">1</span>]).add(edge[<span class="hljs-number">0</span>]);
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dfsHelper</span><span class="hljs-params">(<span class="hljs-keyword">int</span> cur, List&lt;List&lt;Integer&gt;&gt; neis,
+                                          <span class="hljs-keyword">boolean</span>[] isVisited)</span> </span>{
+        isVisited[cur] = <span class="hljs-keyword">true</span>;
+        List&lt;Integer&gt; nei = neis.get(cur);
+        <span class="hljs-keyword">for</span> (Integer i : nei) {
+            <span class="hljs-keyword">if</span> (!isVisited[i]) {
+                dfsHelper(i, neis, isVisited);
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bfsHelper</span><span class="hljs-params">(<span class="hljs-keyword">int</span> enter,
+                            List&lt;List&lt;Integer&gt;&gt; neis, <span class="hljs-keyword">boolean</span>[] isVisited)</span> </span>{
+        isVisited[enter] = <span class="hljs-keyword">true</span>;
+        Deque&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();
+        queue.offerLast(enter);
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            <span class="hljs-keyword">int</span> cur = queue.pollFirst();
+            <span class="hljs-keyword">for</span> (Integer i: neis.get(cur)) {
+                <span class="hljs-keyword">if</span> (!isVisited[i]) {
+                    queue.offerLast(i);
+                    isVisited[i] = <span class="hljs-keyword">true</span>;;
+                }
+            }
+        }
+    }
+}</code></pre>
+                <h2 id="course-schedule">Course Schedule</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canFinish_DFS</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> numCourses, <span class="hljs-keyword">int</span>[][] prerequisites)</span> </span>{
+            <span class="hljs-keyword">if</span> (prerequisites == <span class="hljs-keyword">null</span> || prerequisites.length == <span class="hljs-number">0</span>
+                  || prerequisites[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || prerequisites[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>)
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+
+            <span class="hljs-comment">//Represent the graph</span>
+            List&lt;List&lt;Integer&gt;&gt; neighborList = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+            initLists(prerequisites, neighborList, numCourses);
+            <span class="hljs-comment">//Using status lable</span>
+            <span class="hljs-keyword">int</span>[] status = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[numCourses];
+            <span class="hljs-comment">//Depth First Search</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numCourses; i++) {
+                <span class="hljs-comment">//Find an entrance</span>
+                <span class="hljs-keyword">if</span> (status[i] == <span class="hljs-number">0</span> &amp;&amp; !dfsHelper(neighborList, status, i)) {
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+                }
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initLists</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] prerequisites,
+                        List&lt;List&lt;Integer&gt;&gt; neighborList, <span class="hljs-keyword">int</span> numCourses)</span> </span>{
+          <span class="hljs-comment">//Create Lists</span>
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numCourses; i++) {
+              List&lt;Integer&gt; neighbor = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+              neighborList.add(neighbor);
+          }
+          <span class="hljs-comment">//Add Neighbors</span>
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] vector: prerequisites) {
+              neighborList.get(vector[<span class="hljs-number">1</span>]).add(vector[<span class="hljs-number">0</span>]);
+          }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">dfsHelper</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; neighborList,
+                                          <span class="hljs-keyword">int</span>[] status, <span class="hljs-keyword">int</span> cur)</span> </span>{
+        status[cur] = -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i : neighborList.get(cur)) {
+            <span class="hljs-keyword">if</span>(status[i] == -<span class="hljs-number">1</span> || !dfsHelper(neighborList, status, i))
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        status[cur] = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canFinish_BFS</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> numCourses, <span class="hljs-keyword">int</span>[][] prerequisites)</span> </span>{
+        <span class="hljs-keyword">if</span> (prerequisites == <span class="hljs-keyword">null</span> || prerequisites.length == <span class="hljs-number">0</span> ||
+                prerequisites[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || prerequisites[<span class="hljs-number">0</span>].length != <span class="hljs-number">2</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        <span class="hljs-comment">//Represent the graph</span>
+        List&lt;List&lt;Integer&gt;&gt; neighborList = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        <span class="hljs-comment">//Using inCount</span>
+        <span class="hljs-keyword">int</span>[] inCount = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[numCourses];
+        initListsAndInCount(prerequisites, neighborList, numCourses, inCount);
+        <span class="hljs-comment">//Breadth First Search</span>
+        <span class="hljs-keyword">int</span>[] finished = {<span class="hljs-number">0</span>};
+        Deque&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;Integer&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numCourses; i++) {
+            <span class="hljs-comment">//Find an entrance and put into queue</span>
+            <span class="hljs-keyword">if</span> (inCount[i] == <span class="hljs-number">0</span>) {
+                queue.offerLast(i);
+            }
+        }
+        bfsHelper(neighborList, inCount, queue, finished);
+        <span class="hljs-keyword">return</span> finished[<span class="hljs-number">0</span>] == numCourses;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bfsHelper</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; neighborList, <span class="hljs-keyword">int</span>[] inCount,
+                                  Deque&lt;Integer&gt; queue, <span class="hljs-keyword">int</span>[] finished)</span> </span>{
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            <span class="hljs-comment">//queue.pollFirst() represents this node is finished</span>
+            <span class="hljs-keyword">int</span> cur = queue.pollFirst();
+            finished[<span class="hljs-number">0</span>]++;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> next : neighborList.get(cur)) {
+                <span class="hljs-keyword">if</span> (--inCount[next] == <span class="hljs-number">0</span>) {
+                    <span class="hljs-comment">//Queue maintains all nodes with inCount == 0</span>
+                    queue.offerLast(next);
+                }
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initListsAndInCount</span> <span class="hljs-params">(<span class="hljs-keyword">int</span>[][] prerequisites,
+          List&lt;List&lt;Integer&gt;&gt; neighborList, <span class="hljs-keyword">int</span> numCourses, <span class="hljs-keyword">int</span>[] inCount)</span> </span>{
+        <span class="hljs-comment">//Create Lists</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numCourses; i++) {
+            List&lt;Integer&gt; neighbor = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+            neighborList.add(neighbor);
+        }
+        <span class="hljs-comment">//Add Neighbors</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] vector: prerequisites) {
+            inCount[vector[<span class="hljs-number">0</span>]]++;
+            neighborList.get(vector[<span class="hljs-number">1</span>]).add(vector[<span class="hljs-number">0</span>]);
+        }
+    }
+}
+</code></pre>
+                <h2 id="walls--gates">Walls &amp; Gates</h2><pre><code class="lang-JAVA"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">wallsAndGates_BFS</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] rooms)</span> </span>{
+    <span class="hljs-keyword">if</span> (rooms == <span class="hljs-keyword">null</span> || rooms.length == <span class="hljs-number">0</span> || rooms[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || rooms[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; rooms.length; ++i) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; rooms[<span class="hljs-number">0</span>].length; ++j) {
+            <span class="hljs-keyword">if</span> (rooms[i][j] == <span class="hljs-number">0</span>) {
+                bfsHelper(rooms, i, j);
+            }
+        }
+    }
+}
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">bfsHelper</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] rooms, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">int</span> row = rooms.length;
+        <span class="hljs-keyword">int</span> col = rooms[<span class="hljs-number">0</span>].length;
+        Deque&lt;<span class="hljs-keyword">int</span>[]&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;<span class="hljs-keyword">int</span>[]&gt;();
+        queue.offer(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i, j}); <span class="hljs-comment">// Put gate in the queue</span>
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            <span class="hljs-keyword">int</span>[] cur = queue.pollFirst();
+            <span class="hljs-keyword">int</span> x = cur[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> y = cur[<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (isValid(x + <span class="hljs-number">1</span>, y, row, col) &amp;&amp; rooms[x + <span class="hljs-number">1</span>][y] &gt; rooms[x][y] + <span class="hljs-number">1</span>) {
+               rooms[x + <span class="hljs-number">1</span>][y] = rooms[x][y] + <span class="hljs-number">1</span>;
+               queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x + <span class="hljs-number">1</span>, y});
+            }
+            <span class="hljs-keyword">if</span> (isValid(x, y + <span class="hljs-number">1</span>, row, col) &amp;&amp; rooms[x][y + <span class="hljs-number">1</span>] &gt; rooms[x][y] + <span class="hljs-number">1</span>) {
+               rooms[x][y + <span class="hljs-number">1</span>] = rooms[x][y] + <span class="hljs-number">1</span>;
+               queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x, y + <span class="hljs-number">1</span>});
+            }
+            <span class="hljs-keyword">if</span> (isValid(x - <span class="hljs-number">1</span>, y, row, col) &amp;&amp; rooms[x - <span class="hljs-number">1</span>][y] &gt; rooms[x][y] + <span class="hljs-number">1</span>) {
+               rooms[x - <span class="hljs-number">1</span>][y] = rooms[x][y] + <span class="hljs-number">1</span>;
+               queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x - <span class="hljs-number">1</span>, y});
+            }
+            <span class="hljs-keyword">if</span> (isValid(x, y - <span class="hljs-number">1</span>, row, col) &amp;&amp; rooms[x][y - <span class="hljs-number">1</span>] &gt; rooms[x][y] + <span class="hljs-number">1</span>) {
+               rooms[x][y - <span class="hljs-number">1</span>] = rooms[x][y] + <span class="hljs-number">1</span>;
+               queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x, y - <span class="hljs-number">1</span>});
+            }
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">int</span> row, <span class="hljs-keyword">int</span> col)</span> </span>{
+      <span class="hljs-keyword">return</span> x &gt;= <span class="hljs-number">0</span> &amp;&amp; y &gt;= <span class="hljs-number">0</span> &amp;&amp; x &lt; row &amp;&amp; y &lt; col;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">wallsAndGates_MultiEndBFS</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] rooms)</span> </span>{
+        <span class="hljs-keyword">if</span> (rooms == <span class="hljs-keyword">null</span> || rooms.length == <span class="hljs-number">0</span> ||
+                      rooms[<span class="hljs-number">0</span>] == <span class="hljs-keyword">null</span> || rooms[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        Deque&lt;<span class="hljs-keyword">int</span>[]&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;<span class="hljs-keyword">int</span>[]&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; rooms.length; ++i) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; rooms[<span class="hljs-number">0</span>].length; ++j) {
+                <span class="hljs-keyword">if</span> (rooms[i][j] == <span class="hljs-number">0</span>) {
+                    <span class="hljs-comment">//Put all gates into queue</span>
+                    queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{i, j});
+                }
+            }
+        }
+        multiEndbfsHelper(queue, rooms);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">multiEndbfsHelper</span><span class="hljs-params">(Deque&lt;<span class="hljs-keyword">int</span>[]&gt; queue, <span class="hljs-keyword">int</span>[][] rooms)</span> </span>{
+      <span class="hljs-keyword">int</span> row = rooms.length;
+      <span class="hljs-keyword">int</span> col = rooms[<span class="hljs-number">0</span>].length;
+      <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+          <span class="hljs-keyword">int</span>[] cur = queue.pollFirst();
+          <span class="hljs-keyword">int</span> x = cur[<span class="hljs-number">0</span>];
+          <span class="hljs-keyword">int</span> y = cur[<span class="hljs-number">1</span>];
+          <span class="hljs-keyword">if</span> (isValid(x + <span class="hljs-number">1</span>, y, row, col) &amp;&amp; rooms[x + <span class="hljs-number">1</span>][y] == Integer.MAX_VALUE) {
+             rooms[x + <span class="hljs-number">1</span>][y] = rooms[x][y] + <span class="hljs-number">1</span>;
+             queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x + <span class="hljs-number">1</span>, y});
+          }
+          <span class="hljs-keyword">if</span> (isValid(x, y + <span class="hljs-number">1</span>, row, col) &amp;&amp; rooms[x][y + <span class="hljs-number">1</span>] == Integer.MAX_VALUE) {
+             rooms[x][y + <span class="hljs-number">1</span>] = rooms[x][y] + <span class="hljs-number">1</span>;
+             queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x, y + <span class="hljs-number">1</span>});
+          }
+
+          <span class="hljs-keyword">if</span> (isValid(x - <span class="hljs-number">1</span>, y, row, col) &amp;&amp; rooms[x - <span class="hljs-number">1</span>][y] == Integer.MAX_VALUE) {
+             rooms[x - <span class="hljs-number">1</span>][y] = rooms[x][y] + <span class="hljs-number">1</span>;
+             queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x - <span class="hljs-number">1</span>, y});
+          }
+          <span class="hljs-keyword">if</span> (isValid(x, y - <span class="hljs-number">1</span>, row, col) &amp;&amp; rooms[x][y - <span class="hljs-number">1</span>] == Integer.MAX_VALUE) {
+             rooms[x][y - <span class="hljs-number">1</span>] = rooms[x][y] + <span class="hljs-number">1</span>;
+             queue.offerLast(<span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{x, y - <span class="hljs-number">1</span>});
+          }
+      }
+    }
+}</code></pre>
+
+            </section>
+        </div>
+        <div class="search-results">
+            <div class="has-results">
+                <h1 class="search-results-title">
+                    <span class="search-results-count"></span>
+                    results matching "<span class="search-query"></span>"
+                </h1>
+                <ul class="search-results-list">
+
+                </ul>
+            </div>
+            <div class="no-results">
+                <h1 class="search-results-title">
+                    No results matching "<span class="search-query"></span>"
+                </h1>
+            </div>
+        </div>
+    </div>
+
+</div>
